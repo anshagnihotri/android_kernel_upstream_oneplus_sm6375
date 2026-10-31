@@ -36,9 +36,12 @@ jobs:
         run: |
           mkdir -p toolchains/clang
           cd toolchains/clang
-          wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/android14-release/clang-${CLANG_VERSION}.tar.gz
-          tar -xf clang-${CLANG_VERSION}.tar.gz
-          rm clang-${CLANG_VERSION}.tar.gz
+          git clone --depth=1 -b android14-release --filter=blob:none https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86 clang-repo
+          cd clang-repo
+          git sparse-checkout set clang-${CLANG_VERSION}
+          cd ..
+          mv clang-repo/clang-${CLANG_VERSION}/* .
+          rm -rf clang-repo
 
       - name: Compile Kernel
         run: |
