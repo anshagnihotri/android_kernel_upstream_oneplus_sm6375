@@ -31,7 +31,7 @@
 #include "bob_ic/oplus_tps6128xd.h"
 #include "oplus_chg_exception.h"
 #ifndef CONFIG_DISABLE_OPLUS_FUNCTION
-#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
+#include <soc/oplus/system/oplus_project.h>
 #endif
 #include "oplus_region_check.h"
 

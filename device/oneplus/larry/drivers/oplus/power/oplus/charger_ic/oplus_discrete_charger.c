@@ -45,9 +45,9 @@
 #include "../oplus_chg_ops_manager.h"
 #include "../oplus_chg_module.h"
 #include "../voocphy/oplus_voocphy.h"
-#include <../../../../../../drivers/oplus/kernel/system/include/boot_mode.h>
+#include <soc/oplus/system/boot_mode.h>
 #include "oplus_sy6974b.h"
-#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
+#include <soc/oplus/system/oplus_project.h>
 #include "oplus_battery_sm6375.h"
 #include "oplus_discrete_charger.h"
 #include <linux/nvmem-consumer.h>

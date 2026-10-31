@@ -16,8 +16,8 @@
 #include <linux/notifier.h>
 #include <linux/fb.h>
 #ifndef CONFIG_DISABLE_OPLUS_FUNCTION
-#include <../../../../../../drivers/oplus/kernel/system/include/boot_mode.h>
-#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
+#include <soc/oplus/system/boot_mode.h>
+#include <soc/oplus/system/oplus_project.h>
 #endif
 #if IS_ENABLED(CONFIG_DRM_MSM) || IS_ENABLED(CONFIG_DRM_OPLUS_NOTIFY)
 #include <linux/msm_drm_notify.h>

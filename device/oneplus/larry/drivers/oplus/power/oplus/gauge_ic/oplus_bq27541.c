@@ -34,7 +34,7 @@
 #include <linux/power_supply.h>
 #include <linux/gpio.h>
 #ifndef CONFIG_DISABLE_OPLUS_FUNCTION
-#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
+#include <soc/oplus/device_info.h>
 #endif
 #include <linux/proc_fs.h>
 #include <linux/init.h>
@@ -56,7 +56,7 @@
 #include <linux/regulator/of_regulator.h>
 #include <linux/regulator/machine.h>
 #ifndef CONFIG_DISABLE_OPLUS_FUNCTION
-#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
+#include <soc/oplus/device_info.h>
 #endif
 #include <linux/proc_fs.h>
 #include <linux/soc/qcom/smem.h>

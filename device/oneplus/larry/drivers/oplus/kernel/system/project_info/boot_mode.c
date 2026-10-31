@@ -9,7 +9,7 @@
 #include <linux/uaccess.h>
 #include <linux/sysfs.h>
 #include <linux/gpio.h>
-#include <../../../../../../drivers/oplus/kernel/system/include/boot_mode.h>
+#include <soc/oplus/system/boot_mode.h>
 
 #define MAX_CMD_LENGTH 32
 

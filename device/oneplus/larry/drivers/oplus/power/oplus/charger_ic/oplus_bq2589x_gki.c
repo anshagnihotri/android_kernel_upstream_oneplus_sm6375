@@ -45,7 +45,7 @@
 #include <mtu3.h>
 #endif
 #ifdef OPLUS_FEATURE_CHG_BASIC
-#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
+#include <soc/oplus/system/oplus_project.h>
 #endif
 #include <tcpm.h>
 #include <tcpci.h>

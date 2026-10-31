@@ -51,7 +51,7 @@
 /* xiang.fei@MM.AudioDriver.Codec, 2018/03/12, add for codec */
 #include <linux/proc_fs.h>
 
-#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
+#include <soc/oplus/system/oplus_project.h>
 extern int get_boot_mode(void);
 
 struct tfa98xx *tfa98xx_whole_v6;
@@ -70,7 +70,7 @@ extern bool g_speaker_resistance_fail;
 
 #ifdef OPLUS_FEATURE_MM_FEEDBACK
 //Zhao.Pan@MULTIMEDIA.AUDIODRIVER.HeadsetDet, 2021/06/03, Add for smartpa err feedback.
-#include <../../../../../../drivers/oplus/kernel/system/include/oplus_mm_kevent_fb.h>
+#include <soc/oplus/system/oplus_mm_kevent_fb.h>
 #endif
 
 /* Change volume selection behavior:

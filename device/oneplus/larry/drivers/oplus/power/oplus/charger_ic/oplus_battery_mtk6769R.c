@@ -47,8 +47,8 @@
 #include <tcpm.h>
 #include <mtk_gauge_time_service.h>
 
-#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
-#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
+#include <soc/oplus/device_info.h>
+#include <soc/oplus/system/oplus_project.h>
 #include <linux/gpio.h>
 #include <linux/of_gpio.h>
 #include "../oplus_charger.h"

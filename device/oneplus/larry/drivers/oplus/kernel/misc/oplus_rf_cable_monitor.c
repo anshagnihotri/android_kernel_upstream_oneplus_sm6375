@@ -12,8 +12,8 @@
 #include <linux/stat.h>
 #include <linux/string.h>
 #include <linux/types.h>
-#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
-#include <../../../../../../drivers/oplus/kernel/system/include/boot_mode.h>
+#include <soc/oplus/system/oplus_project.h>
+#include <soc/oplus/system/boot_mode.h>
 #include <linux/soc/qcom/smem.h>
 #include <linux/gpio.h>
 #include <linux/workqueue.h>

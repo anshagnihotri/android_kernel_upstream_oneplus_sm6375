@@ -23,7 +23,7 @@
 #include "oplus_voocphy.h"
 #include "../charger_ic/oplus_switching.h"
 #ifndef CONFIG_DISABLE_OPLUS_FUNCTION
-#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
+#include <soc/oplus/system/oplus_project.h>
 #endif
 #include "../oplus_pps.h"
 #include "oplus_quirks.h"

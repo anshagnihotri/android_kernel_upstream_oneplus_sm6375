@@ -16,7 +16,7 @@
 #include <linux/mutex.h>
 #include <linux/string.h>
 #include <linux/iio/consumer.h>
-#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
+#include <soc/oplus/system/oplus_project.h>
 #include <linux/rtc.h>
 #include <linux/device.h>
 #include "oplus_battery_sm8350.h"

@@ -22,7 +22,7 @@
 #include <linux/ctype.h>
 #include <linux/miscdevice.h>
 #include <linux/proc_fs.h>
-#include <../../../../../../drivers/oplus/kernel/system/include/param_rw.h>
+#include <soc/oplus/system/param_rw.h>
 
 
 #define PARAM_PARTITION "/dev/block/bootdevice/by-name/param"

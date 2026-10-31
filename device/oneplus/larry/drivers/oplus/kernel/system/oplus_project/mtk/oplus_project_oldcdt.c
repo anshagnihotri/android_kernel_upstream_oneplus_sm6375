@@ -16,8 +16,8 @@
 #include <linux/syscalls.h>
 
 
-#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
-#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project_oldcdt.h>
+#include <soc/oplus/system/oplus_project.h>
+#include <soc/oplus/system/oplus_project_oldcdt.h>
 
 
 extern struct proc_dir_entry *oplus_info;

@@ -52,7 +52,7 @@
 
 #include <pmic.h>
 #include <mtk_gauge_time_service.h>
-#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
+#include <soc/oplus/system/oplus_project.h>
 
 #include "../voocphy/oplus_voocphy.h"
 //#include "mtk_charger_intf.h"

@@ -16,8 +16,8 @@
 #include <linux/of_gpio.h>
 #include <linux/mutex.h>
 #include <linux/iio/consumer.h>
-#include <../../../../../../drivers/oplus/kernel/system/include/boot_mode.h>
-#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
+#include <soc/oplus/system/boot_mode.h>
+#include <soc/oplus/system/oplus_project.h>
 #include <linux/remoteproc/qcom_rproc.h>
 #include <linux/rtc.h>
 #include <linux/device.h>

@@ -24,7 +24,7 @@
 #include <linux/gpio.h>
 
 /* #include <mt-plat/battery_common.h> */
-#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
+#include <soc/oplus/device_info.h>
 #include <linux/proc_fs.h>
 #include <linux/init.h>
 #else
@@ -44,7 +44,7 @@
 #include <linux/regulator/driver.h>
 #include <linux/regulator/of_regulator.h>
 #include <linux/regulator/machine.h>
-#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
+#include <soc/oplus/device_info.h>
 #include <linux/proc_fs.h>
 #include <linux/soc/qcom/smem.h>
 #endif

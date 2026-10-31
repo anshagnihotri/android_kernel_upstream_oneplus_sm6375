@@ -56,7 +56,7 @@
 #include <linux/timekeeping.h>
 #endif
 
-#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
+#include <soc/oplus/system/oplus_project.h>
 
 #define SEQ_printf(m, x...)     \
         do {                        \

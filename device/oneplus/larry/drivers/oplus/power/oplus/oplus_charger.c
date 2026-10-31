@@ -13,7 +13,7 @@
 #include <linux/module.h>
 #include <linux/sched/clock.h>
 #ifndef CONFIG_DISABLE_OPLUS_FUNCTION
-#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
+#include <soc/oplus/system/oplus_project.h>
 #endif
 #include <linux/miscdevice.h>
 

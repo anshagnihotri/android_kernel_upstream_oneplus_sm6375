@@ -12,7 +12,7 @@
 #include <linux/slab.h>
 #include <linux/rtc.h>
 //#include <linux/oem/boot_mode.h>
-#include <../../../../../../drivers/oplus/kernel/system/include/boot_mode.h>
+#include <soc/oplus/system/boot_mode.h>
 #include <linux/pmic-voter.h>
 //#include <linux/power/op_wlc_helper.h>
 #include "../oplus_wlchg_policy.h"

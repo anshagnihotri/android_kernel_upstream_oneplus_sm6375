@@ -14,8 +14,8 @@
 #include <linux/of.h>
 #include <linux/syscalls.h>
 
-#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
-#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project_oldcdt.h>
+#include <soc/oplus/system/oplus_project.h>
+#include <soc/oplus/system/oplus_project_oldcdt.h>
 
 #ifdef CONFIG_MTK_SECURITY_SW_SUPPORT
 #include <sec_boot_lib.h>

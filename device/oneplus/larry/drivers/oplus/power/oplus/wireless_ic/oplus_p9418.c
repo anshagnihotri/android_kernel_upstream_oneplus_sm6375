@@ -34,8 +34,8 @@
 #include <linux/timer.h>
 #include <linux/fs.h>
 
-#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
-#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
+#include <soc/oplus/device_info.h>
+#include <soc/oplus/system/oplus_project.h>
 
 #include "../oplus_vooc.h"
 #include "../oplus_gauge.h"
@@ -46,7 +46,7 @@
 #include "oplus_chargepump.h"
 #include "oplus_p9418.h"
 #include "oplus_p9418_fw.h"
-#include <../../../../../../drivers/oplus/kernel/system/include/boot_mode.h>
+#include <soc/oplus/system/boot_mode.h>
 
 #define DEBUG_BY_FILE_OPS
 #define P9418_WAIT_TIME 50		/* sec */

@@ -8,7 +8,7 @@
 #include <linux/delay.h>
 #include <linux/mutex.h>
 #include <linux/proc_fs.h>
-#include <../../../../../../drivers/oplus/kernel/system/include/oplus_mm_kevent_fb.h>
+#include <soc/oplus/system/oplus_mm_kevent_fb.h>
 #include "oplus_mm_kevent.h"
 
 static void mm_fb_kevent_upload_jobs(struct work_struct *work);

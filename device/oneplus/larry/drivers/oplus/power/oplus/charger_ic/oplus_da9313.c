@@ -33,7 +33,7 @@
 #else
 #include <mt-plat/v1/charger_type.h>
 #endif
-#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
+#include <soc/oplus/device_info.h>
 #include <linux/of.h>
 #include <linux/of_gpio.h>
 #include <linux/gpio.h>
@@ -55,7 +55,7 @@ extern void mt_power_off(void);
 #include <linux/regulator/of_regulator.h>
 #include <linux/regulator/machine.h>
 #include <linux/rtc.h>
-#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
+#include <soc/oplus/device_info.h>
 
 
 #endif

@@ -39,7 +39,7 @@
 #include <mach/mtk_rtc.h>
 #endif
 
-#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
+#include <soc/oplus/device_info.h>
 
 extern void mt_power_off(void); 
 #else
@@ -60,7 +60,7 @@ extern void mt_power_off(void);
 #include <linux/regulator/machine.h>
 
 #include <mach/oplus_boot_mode.h>
-#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
+#include <soc/oplus/device_info.h>
 
 
 #endif

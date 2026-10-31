@@ -25,7 +25,7 @@
 //#include <mtk_boot_common.h>
 #include <mt-plat/mtk_rtc.h>
 //#include <mt-plat/charger_type.h>
-#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
+#include <soc/oplus/device_info.h>
 extern void mt_power_off(void); 
 
 #else
@@ -45,7 +45,7 @@ extern void mt_power_off(void);
 #include <linux/regulator/of_regulator.h>
 #include <linux/regulator/machine.h>
 #include <linux/rtc.h>
-#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
+#include <soc/oplus/device_info.h>
 
 #endif
 

@@ -10,7 +10,7 @@
 #include <../fs/proc/internal.h>
 #include <../kernel/sched/sched.h>
 
-#include <../../../../../../drivers/oplus/kernel/oplus_performance/healthinfo/main/healthinfo.h>
+#include <soc/oplus/healthinfo.h>
 
 void update_jank_trace_info(struct task_struct *tsk, int trace_type, unsigned int cpu, u64 delta)
 {

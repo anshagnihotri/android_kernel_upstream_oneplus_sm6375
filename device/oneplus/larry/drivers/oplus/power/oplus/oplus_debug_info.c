@@ -18,7 +18,7 @@
 
 
 #if defined(CONFIG_OPLUS_FEATURE_FEEDBACK) || defined(CONFIG_OPLUS_FEATURE_FEEDBACK_MODULE)
-#include <../../../../../../drivers/oplus/kernel/system/include/kernel_fb.h>
+#include <soc/oplus/system/kernel_fb.h>
 #endif
 
 #include "oplus_vooc.h"

@@ -42,7 +42,7 @@
 #include <linux/time.h>
 #include <mtk_musb.h>
 #ifdef OPLUS_FEATURE_CHG_BASIC
-#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
+#include <soc/oplus/system/oplus_project.h>
 #endif
 
 extern void set_charger_ic(int sel);

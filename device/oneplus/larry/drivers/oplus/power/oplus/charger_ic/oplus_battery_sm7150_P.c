@@ -35,9 +35,9 @@
 #include "../../../../kernel/msm-4.14/drivers/power/supply/qcom/storm-watch.h"
 #include "../../../../kernel/msm-4.14/drivers/power/supply/qcom/schgm-flash.h"
 
-#include <../../../../../../drivers/oplus/kernel/system/include/boot_mode.h>
-#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
-#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
+#include <soc/oplus/system/boot_mode.h>
+#include <soc/oplus/device_info.h>
+#include <soc/oplus/system/oplus_project.h>
 
 #include "../oplus_charger.h"
 #include "../oplus_gauge.h"

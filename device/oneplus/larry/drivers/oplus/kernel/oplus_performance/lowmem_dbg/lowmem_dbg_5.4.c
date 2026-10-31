@@ -25,7 +25,7 @@
 #include <linux/version.h>
 #include <linux/dma-buf.h>
 #include <linux/fdtable.h>
-#include <../../../../../../drivers/oplus/kernel/oplus_performance/lowmem_dbg/lowmem_dbg.h>
+#include <soc/oplus/lowmem_dbg.h>
 #include <linux/proc_fs.h>
 #include <linux/vmstat.h>
 #include <linux/vmalloc.h>

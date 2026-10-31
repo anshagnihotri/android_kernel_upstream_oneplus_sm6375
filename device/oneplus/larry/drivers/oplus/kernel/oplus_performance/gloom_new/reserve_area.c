@@ -13,7 +13,7 @@
 #include <linux/highmem.h>
 #include <linux/reserve_area.h>
 #ifdef CONFIG_OPLUS_HEALTHINFO
-#include <../../../../../../drivers/oplus/kernel/oplus_performance/healthinfo/main/healthinfo.h>
+#include <soc/oplus/healthinfo.h>
 #endif
 #include <linux/version.h>
 #define STACK_RLIMIT_OVERFFLOW (32<<20)

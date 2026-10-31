@@ -15,7 +15,7 @@
 #include <linux/err.h>
 #include <linux/of_gpio.h>
 #include <linux/interrupt.h>
-#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
+#include <soc/oplus/device_info.h>
 #include <oplus_chg_ic.h>
 #include <oplus_chg_module.h>
 #include <oplus_chg.h>
