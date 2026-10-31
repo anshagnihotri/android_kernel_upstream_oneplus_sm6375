@@ -32,8 +32,8 @@
 #if (LINUX_VERSION_CODE < KERNEL_VERSION(5, 4, 0))
 #endif
 #ifndef CONFIG_DISABLE_OPLUS_FUNCTION
-#include <soc/oplus/device_info.h>
-#include <soc/oplus/system/oplus_project.h>
+#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
 #endif
 
 #include "../op_wlchg_v2/oplus_chg_wls.h"
@@ -45,7 +45,7 @@
 #include "oplus_nu1619.h"
 #include "oplus_nu1619_fw.h"
 #ifndef CONFIG_DISABLE_OPLUS_FUNCTION
-#include <soc/oplus/system/boot_mode.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/boot_mode.h>
 #endif
 
 #define DEBUG_BY_FILE_OPS

@@ -29,7 +29,7 @@
 #include <linux/version.h>
 #include <linux/time.h>
 #include <linux/sched/clock.h>
-#include <soc/oplus/system/oplus_project.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
 #include <linux/rtc.h>
 #include <linux/device.h>
 #include <linux/of_platform.h>

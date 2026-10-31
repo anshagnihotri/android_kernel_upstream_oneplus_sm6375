@@ -1,5 +1,5 @@
 #include <linux/delay.h>
-#include <soc/oplus/healthinfo.h>
+#include <../../../../../../drivers/oplus/kernel/oplus_performance/healthinfo/main/healthinfo.h>
 #include <linux/kernel_stat.h>
 #include <linux/version.h>
 

@@ -36,9 +36,9 @@
 #include <linux/proc_fs.h>
 #include <linux/iio/consumer.h>
 #include <linux/kthread.h>
-#include <soc/oplus/system/boot_mode.h>
-#include <soc/oplus/device_info.h>
-#include <soc/oplus/system/oplus_project.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/boot_mode.h>
+#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
 #include "oplus_battery_msm8150Q_pro.h"
 #include "../oplus_charger.h"
 #include "../oplus_gauge.h"

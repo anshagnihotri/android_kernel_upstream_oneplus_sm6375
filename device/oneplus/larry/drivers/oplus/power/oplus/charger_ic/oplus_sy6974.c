@@ -54,7 +54,7 @@
 #include <mach/mt_boot.h>
 #include <mach/mtk_rtc.h>
 #endif
-#include <soc/oplus/device_info.h>
+#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
 
 
 
@@ -77,7 +77,7 @@ extern void mt_power_off(void);
 #include <linux/regulator/machine.h>
 
 #include <mach/oplus_boot_mode.h>
-#include <soc/oplus/device_info.h>
+#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
 
 void (*enable_aggressive_segmentation_fn)(bool);
 

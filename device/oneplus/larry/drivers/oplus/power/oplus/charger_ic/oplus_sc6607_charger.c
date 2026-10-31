@@ -41,7 +41,7 @@
 #include "../voocphy/oplus_voocphy.h"
 #include "oplus_sc6607_reg.h"
 #ifndef CONFIG_OPLUS_CHARGER_MTK
-#include <soc/oplus/system/boot_mode.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/boot_mode.h>
 #include "oplus_discrete_charger.h"
 #endif
 

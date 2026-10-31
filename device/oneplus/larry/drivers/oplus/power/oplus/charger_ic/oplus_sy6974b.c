@@ -37,7 +37,7 @@
 #include "../gauge_ic/oplus_bq27541.h"
 
 #if (LINUX_VERSION_CODE >= KERNEL_VERSION(5, 1, 5))
-#include <soc/oplus/system/boot_mode.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/boot_mode.h>
 #else
 #include <../../system/include/boot_mode.h>
 #endif

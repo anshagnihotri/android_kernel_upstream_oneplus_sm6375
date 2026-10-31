@@ -34,7 +34,7 @@
 #include <linux/of_gpio.h>
 
 #ifndef CONFIG_DISABLE_OPLUS_FUNCTION
-#include <soc/oplus/system/oplus_project.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
 #endif
 #include <ufcs_class.h>
 

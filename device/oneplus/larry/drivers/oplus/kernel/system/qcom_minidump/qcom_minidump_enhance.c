@@ -33,8 +33,8 @@
 #include <linux/percpu.h>
 #include <soc/qcom/memory_dump.h>
 #include <linux/sched/debug.h>
-#include <soc/oplus/system/oplus_project.h>
-#include <soc/oplus/system/qcom_minidump_enhance.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/qcom_minidump_enhance.h>
 
 #define CPUCTX_VERSION 		1
 #define CPUCTX_MAIGC1 		0x4D494E49

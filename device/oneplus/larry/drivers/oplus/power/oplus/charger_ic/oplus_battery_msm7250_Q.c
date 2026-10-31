@@ -27,7 +27,7 @@
 #include <linux/rtc.h>
 #include <linux/proc_fs.h>
 #include <linux/kthread.h>
-#include <soc/oplus/system/oplus_project.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
 
 //#include "oplus_battery_msm7250_Q.h"
 #include "../../supply/qcom/smb5-reg.h"
@@ -47,8 +47,8 @@
 #include "../gauge_ic/oplus_bq27541.h"
 #include "op_charge.h"
 #ifdef OPLUS_FEATURE_CHG_BASIC
-//#include <soc/oplus/system/boot_mode.h>
-//#include <soc/oplus/device_info.h>
+//#include <../../../../../../drivers/oplus/kernel/system/include/boot_mode.h>
+//#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
 static struct task_struct *oplus_usbtemp_kthread;
 DECLARE_WAIT_QUEUE_HEAD(oplus_usbtemp_wq);
 extern struct oplus_chg_chip *g_oplus_chip;

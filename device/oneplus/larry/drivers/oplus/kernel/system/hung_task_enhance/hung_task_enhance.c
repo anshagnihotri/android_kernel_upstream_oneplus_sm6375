@@ -21,8 +21,8 @@
 #include <linux/sched/sysctl.h>
 #include <linux/sched/signal.h>
 
-#include <soc/oplus/system/hung_task_enhance.h>
-#include <soc/oplus/system/oplus_signal.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/hung_task_enhance.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/oplus_signal.h>
 
 #include <linux/version.h>
 

@@ -36,7 +36,7 @@
 #include <linux/random.h>
 
 
-#include <soc/oplus/system/kernel_fb.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/kernel_fb.h>
 #include "oplus_fb_guard_netlink.h"
 
 

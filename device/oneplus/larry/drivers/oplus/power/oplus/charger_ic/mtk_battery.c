@@ -60,8 +60,8 @@
 #ifdef OPLUS_FEATURE_CHG_BASIC
 #include "../oplus/oplus_gauge.h"
 #ifdef OPLUS_FEATURE_CHG_BASIC
-#include <soc/oplus/device_info.h>
-#include <soc/oplus/system/oplus_project.h>
+#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
 #include <linux/gpio.h>
 #endif  /*OPLUS_FEATURE_CHG_BASIC*/
 struct power_supply	*oplus_batt_psy;

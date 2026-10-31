@@ -7,7 +7,7 @@
 #include <linux/power_supply.h>
 #include <linux/sched/clock.h>
 #ifndef CONFIG_DISABLE_OPLUS_FUNCTION
-#include <soc/oplus/system/oplus_project.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
 #endif
 #include <oplus_chg.h>
 #include <oplus_chg_voter.h>

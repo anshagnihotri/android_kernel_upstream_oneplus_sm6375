@@ -20,8 +20,8 @@
 #endif
 #include <linux/notifier.h>
 #include "../../../fs/pstore/internal.h"
-#include <soc/oplus/system/oplus_project.h>
-#include <soc/oplus/system/device_info.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/device_info.h>
 
 
 #define SMEM_CHIP_INFO 137

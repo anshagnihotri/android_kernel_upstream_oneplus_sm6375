@@ -9,7 +9,7 @@
 #include <linux/kernel.h>
 #include <linux/debugfs.h>
 #ifndef CONFIG_DISABLE_OPLUS_FUNCTION
-#include <soc/oplus/system/oplus_project.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
 #endif
 #include "charger_ic/oplus_switching.h"
 #if __and(IS_MODULE(CONFIG_OPLUS_CHG), IS_MODULE(CONFIG_OPLUS_CHG_V2))

@@ -20,8 +20,8 @@
 #include <linux/mutex.h>
 #include <linux/regmap.h>
 #include <linux/regulator/consumer.h>
-#include <soc/oplus/device_info.h>
-#include <soc/oplus/system/boot_mode.h>
+#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/boot_mode.h>
 
 #include <oplus_chg_module.h>
 #include <oplus_chg_ic.h>

@@ -23,7 +23,7 @@
 #include <linux/regulator/machine.h>
 #include <linux/rtc.h>
 #ifndef CONFIG_DISABLE_OPLUS_FUNCTION
-#include <soc/oplus/device_info.h>
+#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
 #endif
 
 #include "oplus_charger.h"

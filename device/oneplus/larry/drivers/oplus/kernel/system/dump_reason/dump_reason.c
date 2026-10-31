@@ -11,8 +11,8 @@
 #include <linux/string.h>
 #include <linux/kallsyms.h>
 #include <linux/soc/qcom/smem.h>
-#include <soc/oplus/system/dump_reason.h>
-#include <soc/oplus/system/device_info.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/dump_reason.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/device_info.h>
 
 static char caller_function_name[KSYM_SYMBOL_LEN];
 static struct dump_info *dp_info;

@@ -39,8 +39,8 @@
 #include <uapi/linux/sched/types.h>
 
 #ifndef CONFIG_DISABLE_OPLUS_FUNCTION
-#include <soc/oplus/system/oplus_project.h>
-#include <soc/oplus/device_info.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
+#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
 #endif
 
 #include <ufcs_class.h>

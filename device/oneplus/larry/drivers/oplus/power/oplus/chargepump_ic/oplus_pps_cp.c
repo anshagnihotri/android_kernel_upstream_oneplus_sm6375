@@ -43,8 +43,8 @@ extern void mt_power_off(void);
 #include <linux/regulator/driver.h>
 #include <linux/regulator/of_regulator.h>
 #include <linux/regulator/machine.h>
-#include <soc/oplus/device_info.h>
-#include <soc/oplus/system/boot_mode.h>
+#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/boot_mode.h>
 #endif
 
 #include "../oplus_vooc.h"

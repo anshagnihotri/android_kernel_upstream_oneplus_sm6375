@@ -25,7 +25,7 @@
 #else
 #include <mt-plat/v1/charger_type.h>
 #endif
-#include <soc/oplus/device_info.h>
+#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
 #endif
 #include <linux/gpio.h>
 #include <linux/of_gpio.h>
@@ -46,7 +46,7 @@
 #include <linux/regulator/of_regulator.h>
 #include <linux/regulator/machine.h>
 #include <linux/rtc.h>
-#include <soc/oplus/device_info.h>
+#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
 #endif
 
 #include "../oplus_vooc.h"

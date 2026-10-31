@@ -40,7 +40,7 @@
 #include <mt-plat/charger_class.h>
 #include <mt-plat/charger_type.h>
 #else
-#include <soc/oplus/system/oplus_project.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
 #include <mt-plat/v1/charger_class.h>
 #include <mt-plat/v1/charger_type.h>
 #endif

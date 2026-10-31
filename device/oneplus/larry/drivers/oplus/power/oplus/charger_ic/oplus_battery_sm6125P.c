@@ -33,9 +33,9 @@
 
 #ifdef OPLUS_FEATURE_CHG_BASIC
 /* Yichun Chen  PSW.BSP.CHG  2018/04/25  OPLUS_CHARGE */
-#include <soc/oplus/system/boot_mode.h>
-#include <soc/oplus/device_info.h>
-#include <soc/oplus/system/oplus_project.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/boot_mode.h>
+#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
 
 #include "../../oplus/oplus_charger.h"
 #include "../../oplus/oplus_gauge.h"

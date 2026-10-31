@@ -45,8 +45,8 @@
 #include "../../../drivers/power/supply/qcom/step-chg-jeita.h"
 #include "../../../drivers/power/supply/qcom/storm-watch.h"
 
-#include <soc/oplus/system/boot_mode.h>
-//#include <soc/oplus/device_info.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/boot_mode.h>
+//#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
 //#include <soc/oplus/OPLUS_project.h>
 
 #include "../oplus_charger.h"

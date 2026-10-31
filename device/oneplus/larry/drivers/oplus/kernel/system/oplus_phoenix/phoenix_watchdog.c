@@ -14,8 +14,8 @@
 #include <linux/slab.h>
 #include <linux/kthread.h>
 #include <linux/syscalls.h>
-#include <soc/oplus/system/boot_mode.h>
-#include <soc/oplus/system/oplus_project.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/boot_mode.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
 #include <linux/fs.h>
 #include <linux/version.h>
 #include <linux/of_fdt.h>

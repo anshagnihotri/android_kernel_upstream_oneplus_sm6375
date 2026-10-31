@@ -27,7 +27,7 @@
 #include <linux/dma-mapping.h>
 
 #include <linux/module.h>
-#include <soc/oplus/device_info.h>
+#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
 
 #else
 #include <linux/i2c.h>
@@ -46,7 +46,7 @@
 #include <linux/regulator/of_regulator.h>
 #include <linux/regulator/machine.h>
 #ifndef CONFIG_DISABLE_OPLUS_FUNCTION
-#include <soc/oplus/device_info.h>
+#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
 #endif
 #endif
 #include "oplus_vooc_fw.h"

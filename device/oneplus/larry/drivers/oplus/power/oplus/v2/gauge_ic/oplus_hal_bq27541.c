@@ -48,7 +48,7 @@
 #include <linux/soc/qcom/smem.h>
 #endif
 #ifndef CONFIG_DISABLE_OPLUS_FUNCTION
-#include <soc/oplus/device_info.h>
+#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
 #endif
 #include <linux/version.h>
 #include<linux/gfp.h>

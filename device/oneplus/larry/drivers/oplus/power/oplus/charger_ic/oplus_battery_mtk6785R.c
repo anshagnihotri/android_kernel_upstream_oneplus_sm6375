@@ -52,7 +52,7 @@
 
 #include <pmic.h>
 #include <mtk_gauge_time_service.h>
-#include <soc/oplus/system/oplus_project.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
 
 #include <linux/thermal.h>
 

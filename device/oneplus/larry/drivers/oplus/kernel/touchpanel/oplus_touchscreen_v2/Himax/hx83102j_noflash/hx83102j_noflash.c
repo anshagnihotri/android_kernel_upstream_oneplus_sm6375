@@ -29,7 +29,7 @@
 #ifdef CONFIG_TOUCHPANEL_MTK_PLATFORM
 #include<mt-plat/mtk_boot_common.h>
 #else
-#include <soc/oplus/system/boot_mode.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/boot_mode.h>
 #endif
 
 #include <linux/spi/spi.h>

@@ -43,7 +43,7 @@ static inline void *chg_kzalloc(size_t size, gfp_t flags)
 }
 
 #if IS_ENABLED(CONFIG_OPLUS_FEATURE_LOG_CORE)
-#include <soc/oplus/system/olc.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/olc.h>
 
 #define CHG_MODULE_NAME         "charger"
 #define CHG_LOG_PATH            "kernel/chg_debug_info"
@@ -102,7 +102,7 @@ static  int chg_olc_raise_exception(unsigned int excep_chgye, void *summary, uns
 }
 
 #elif IS_ENABLED(CONFIG_OPLUS_FEATURE_OLC)
-#include <soc/oplus/dft/olc.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/olc.h>
 
 #define CHG_LOG_PATH            "kernel/chg_debug_info"
 #define CHG_MODULE_ID           0x2A

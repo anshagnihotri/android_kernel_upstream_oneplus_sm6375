@@ -46,7 +46,7 @@
 #ifdef OPLUS_ARCH_EXTENDS
 /* Jianfeng.Qiu@PSW.MM.AudioDriver.HeadsetDAC, 2017/03/22,
   * Add for change LDO regulator */
-#include <soc/oplus/system/oplus_project.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
 #endif /* OPLUS_ARCH_EXTENDS */
 
 #define AK4376_DRV_NAME "ak4376_codec"

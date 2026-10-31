@@ -3,7 +3,7 @@
  * Copyright (C) 2020 Oplus. All rights reserved.
  */
 
-#include <soc/oplus/healthinfo.h>
+#include <../../../../../../drivers/oplus/kernel/oplus_performance/healthinfo/main/healthinfo.h>
 #include <linux/module.h>
 #include <linux/types.h>
 #include <linux/errno.h>

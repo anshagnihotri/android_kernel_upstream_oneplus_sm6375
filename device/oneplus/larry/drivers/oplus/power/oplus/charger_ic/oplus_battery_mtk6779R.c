@@ -46,7 +46,7 @@
 #include <linux/of_irq.h>
 #include <linux/of_address.h>
 #include <linux/reboot.h>
-#include <soc/oplus/system/oplus_project.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
 
 #ifdef OPLUS_FEATURE_CHG_BASIC
 //====================================================================//

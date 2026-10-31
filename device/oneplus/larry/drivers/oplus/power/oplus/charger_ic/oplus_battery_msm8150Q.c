@@ -20,7 +20,7 @@
 #include <linux/regulator/machine.h>
 #include <linux/iio/consumer.h>
 #include <linux/pmic-voter.h>
-#include <soc/oplus/system/oplus_project.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
 
 #ifdef OPLUS_FEATURE_CHG_BASIC
 #include "../../../../kernel/msm-4.14/drivers/power/supply/qcom/smb5-reg.h"
@@ -39,9 +39,9 @@
 #include <linux/proc_fs.h>
 #include <linux/iio/consumer.h>
 #include <linux/kthread.h>
-#include <soc/oplus/system/boot_mode.h>
-#include <soc/oplus/device_info.h>
-#include <soc/oplus/system/oplus_project.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/boot_mode.h>
+#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
 #include "oplus_battery_msm8150Q.h"
 #include "../oplus_charger.h"
 #include "../oplus_gauge.h"

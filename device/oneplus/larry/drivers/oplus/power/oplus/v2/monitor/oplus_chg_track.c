@@ -21,16 +21,16 @@
 #include <linux/string.h>
 #include <linux/kfifo.h>
 #ifndef CONFIG_DISABLE_OPLUS_FUNCTION
-#include <soc/oplus/system/boot_mode.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/boot_mode.h>
 #endif
 #if defined(CONFIG_OPLUS_FEATURE_FEEDBACK) ||	\
 	defined(CONFIG_OPLUS_FEATURE_FEEDBACK_MODULE)
-#include <soc/oplus/system/kernel_fb.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/kernel_fb.h>
 #elif defined(CONFIG_OPLUS_KEVENT_UPLOAD)
 #include <linux/oplus_kevent.h>
 #endif
 #ifndef CONFIG_DISABLE_OPLUS_FUNCTION
-#include <soc/oplus/system/oplus_project.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
 #endif
 
 #include <oplus_chg.h>

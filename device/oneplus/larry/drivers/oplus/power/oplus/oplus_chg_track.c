@@ -18,7 +18,7 @@
 #include <linux/kthread.h>
 #include <linux/string.h>
 #if defined(CONFIG_OPLUS_FEATURE_FEEDBACK) || defined(CONFIG_OPLUS_FEATURE_FEEDBACK_MODULE)
-#include <soc/oplus/system/kernel_fb.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/kernel_fb.h>
 #elif defined(CONFIG_OPLUS_KEVENT_UPLOAD)
 #include <linux/oplus_kevent.h>
 #endif

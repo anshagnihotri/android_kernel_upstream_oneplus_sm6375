@@ -17,7 +17,7 @@
 #include <linux/types.h>
 #include <linux/string.h>
 #include <linux/delay.h>
-#include <soc/oplus/system/oplus_misc.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/oplus_misc.h>
 #include <linux/sched/signal.h>
 #include <linux/syscalls.h>
 

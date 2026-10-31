@@ -27,7 +27,7 @@
 #include <linux/rtc.h>
 #include <linux/proc_fs.h>
 #include <linux/kthread.h>
-#include <soc/oplus/system/oplus_project.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
 #include <linux/usb/typec.h>
 #include <linux/usb/usbpd.h>
 
@@ -54,8 +54,8 @@
 extern void oplus_force_panic(void);
 #endif
 #ifdef OPLUS_FEATURE_CHG_BASIC
-//#include <soc/oplus/system/boot_mode.h>
-//#include <soc/oplus/device_info.h>
+//#include <../../../../../../drivers/oplus/kernel/system/include/boot_mode.h>
+//#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
 static struct task_struct *oplus_usbtemp_kthread;
 DECLARE_WAIT_QUEUE_HEAD(oplus_usbtemp_wq);
 struct delayed_work usbtemp_recover_work;

@@ -2,7 +2,7 @@
 /*
  * Copyright (C) 2020 Oplus. All rights reserved.
  */
-#include <soc/oplus/healthinfo.h>
+#include <../../../../../../drivers/oplus/kernel/oplus_performance/healthinfo/main/healthinfo.h>
 #include <linux/uaccess.h>
 #include <linux/kernel.h>
 #include <linux/kobject.h>

@@ -34,7 +34,7 @@
 //#include <mt-plat/battery_meter.h>
 #include <linux/module.h>
 #ifndef CONFIG_DISABLE_OPLUS_FUNCTION
-#include <soc/oplus/device_info.h>
+#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
 #endif
 
 #else
@@ -55,9 +55,9 @@
 #include <linux/regulator/of_regulator.h>
 #include <linux/regulator/machine.h>
 #ifndef CONFIG_DISABLE_OPLUS_FUNCTION
-#include <soc/oplus/device_info.h>
-#include <soc/oplus/system/boot_mode.h>
-#include <soc/oplus/system/oplus_project.h>
+#include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/boot_mode.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
 #endif
 #endif
 #include "oplus_vooc_fw.h"

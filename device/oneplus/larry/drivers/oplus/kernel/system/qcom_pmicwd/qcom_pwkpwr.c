@@ -10,7 +10,7 @@
 #include <linux/suspend.h>
 #include <linux/platform_device.h>
 #include <linux/of.h>
-#include "soc/oplus/system/oplus_project.h"
+#include "../../../../../../drivers/oplus/kernel/system/include/oplus_project.h"
 #include <linux/input/qpnp-power-on.h>
 #include <linux/debugfs.h>
 #include <linux/version.h>

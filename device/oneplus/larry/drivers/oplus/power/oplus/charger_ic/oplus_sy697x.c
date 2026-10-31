@@ -58,7 +58,7 @@
 #include "../charger_ic/oplus_short_ic.h"
 #include "../gauge_ic/oplus_bq27541.h"
 #ifndef CONFIG_DISABLE_OPLUS_FUNCTION
-#include <soc/oplus/system/boot_mode.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/boot_mode.h>
 #endif
 #include "../oplus_chg_module.h"
 

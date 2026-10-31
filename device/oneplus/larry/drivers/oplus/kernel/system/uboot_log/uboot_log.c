@@ -33,7 +33,7 @@
 #include <soc/qcom/memory_dump.h>
 #include <soc/qcom/minidump.h>
 
-#include <soc/oplus/system/uboot_utils.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/uboot_utils.h>
 
 #define __KBOOT_LOG_OFFSET				0
 #define LINE_MAX_SIZE					1024
