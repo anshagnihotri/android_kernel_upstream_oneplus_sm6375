@@ -53,7 +53,7 @@ depends on I2C
 	help
 	  Enables support for the oplus charging v1 framework
 
-source "drivers/power/oplus/v1/Kconfig"
+source "device/oneplus/larry/drivers/oplus/power/oplus/v1/Kconfig"
 
 menuconfig OPLUS_CHG_V2
 	tristate "OPLUS charging V2 system"
@@ -64,7 +64,7 @@ menuconfig OPLUS_CHG_V2
 	  Enables support for the oplus charging v2 framework
 
 if OPLUS_CHG_V2
-source "drivers/power/oplus/v2/Kconfig"
+source "device/oneplus/larry/drivers/oplus/power/oplus/v2/Kconfig"
 endif
 
 config OPLUS_CHARGER_WIRELESS_RA9530
@@ -74,5 +74,5 @@ config OPLUS_CHARGER_WIRELESS_RA9530
 
 endif #OPLUS_CHARGER
 
-source "drivers/power/oplus/test-kit/Kconfig"
-source "drivers/power/oplus/config/Kconfig"
+source "device/oneplus/larry/drivers/oplus/power/oplus/test-kit/Kconfig"
+source "device/oneplus/larry/drivers/oplus/power/oplus/config/Kconfig"
