@@ -29,7 +29,6 @@
 #include <linux/device.h>
 #include <linux/regmap.h>
 #include <linux/iio/consumer.h>
-#include <uapi/linux/qg.h>
 #include <linux/timer.h>
 #include <linux/fs.h>
 

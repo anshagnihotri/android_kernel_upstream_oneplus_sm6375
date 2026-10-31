@@ -30,7 +30,6 @@
 #include <linux/regmap.h>
 #include <linux/iio/consumer.h>
 #ifndef CONFIG_OPLUS_CHARGER_MTK
-#include <uapi/linux/qg.h>
 #endif
 #include <linux/timer.h>
 #include <linux/fs.h>

@@ -30,7 +30,6 @@
 #include <linux/iio/consumer.h>
 #include <linux/version.h>
 #if (LINUX_VERSION_CODE < KERNEL_VERSION(5, 4, 0))
-#include <uapi/linux/qg.h>
 #endif
 #ifndef CONFIG_DISABLE_OPLUS_FUNCTION
 #include <soc/oplus/device_info.h>

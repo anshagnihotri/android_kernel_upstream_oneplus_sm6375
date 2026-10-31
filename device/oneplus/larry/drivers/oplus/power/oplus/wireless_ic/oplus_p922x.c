@@ -30,7 +30,6 @@
 #include <linux/regmap.h>
 #include <linux/iio/consumer.h>
 #ifndef CONFIG_OPLUS_CHARGER_MTK
-#include <uapi/linux/qg.h>
 #endif
 #include <soc/oplus/device_info.h>
 #include <soc/oplus/system/oplus_project.h>
