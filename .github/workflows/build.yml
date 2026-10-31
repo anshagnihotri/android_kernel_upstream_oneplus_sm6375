@@ -36,7 +36,7 @@ jobs:
         run: |
           mkdir -p toolchains/clang
           cd toolchains/clang
-          wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-${CLANG_VERSION}.tar.gz
+          wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/android14-release/clang-${CLANG_VERSION}.tar.gz
           tar -xf clang-${CLANG_VERSION}.tar.gz
           rm clang-${CLANG_VERSION}.tar.gz
 
