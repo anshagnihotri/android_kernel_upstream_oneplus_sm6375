@@ -3,7 +3,7 @@ name: Build Kernel (Larry Upstream 6.1)
 on:
   push:
     branches:
-      - lineage-22.1-6.1
+      - lineage-24.0
   pull_request:
 
 jobs:
