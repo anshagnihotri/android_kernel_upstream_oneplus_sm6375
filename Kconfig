@@ -27,6 +27,8 @@ source "crypto/Kconfig"
 
 source "lib/Kconfig"
 
+source "device/oneplus/larry/drivers/oplus/Kconfig"
+
 source "lib/Kconfig.debug"
 
 source "Documentation/Kconfig"
