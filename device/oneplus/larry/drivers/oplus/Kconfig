@@ -1,2 +1,2 @@
-source "drivers/oplus/power/oplus/Kconfig"
-source "drivers/oplus/kernel/touchpanel/oplus_touchscreen_v2/Kconfig"
+source "device/oneplus/larry/drivers/oplus/power/oplus/Kconfig"
+source "device/oneplus/larry/drivers/oplus/kernel/touchpanel/oplus_touchscreen_v2/Kconfig"
