@@ -157,3 +157,4 @@ $(objtree)/$(chg_ic_cfg_h): $(chg_top_cfg) $(chg_ic_cfg) $(chg_ic_cfg_parse)
 
 $(objtree)/$(chg_ic_cfg_json): $(chg_top_cfg) $(chg_ic_cfg) $(chg_ic_cfg_parse)
 	$(call cmd,merge_chg_cfg)
+ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
