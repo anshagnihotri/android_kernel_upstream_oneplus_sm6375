@@ -6,4 +6,5 @@ obj-$(CONFIG_OPLUS_KERNEL_SECURE_GUARD)	 +=  oplus_guard_general.o
 obj-$(CONFIG_OPLUS_KERNEL_SECURE_GUARD)	 +=  oplus_security_hook.o
 obj-$(CONFIG_OPLUS_KERNEL_SECURE_GUARD)	 +=  oplus_kevent.o
 obj-$(CONFIG_OPLUS_KERNEL_SECURE_GUARD)	 +=  oplus_hook_syscall.o
-#endif /* CONFIG_OPLUS_KERNEL_SECURE_FEATURE */
+#endif /* CONFIG_OPLUS_KERNEL_SECURE_FEATURE */subdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
+ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include

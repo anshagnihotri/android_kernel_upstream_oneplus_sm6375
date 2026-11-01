@@ -4,3 +4,6 @@
 	obj-y	+= oplus_nu1619.o
 	obj-y	+= oplus_chargepump.o
 
+subdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
+subdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
+ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include

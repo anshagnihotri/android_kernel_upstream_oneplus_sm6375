@@ -28,4 +28,5 @@ obj-$(CONFIG_TOUCHPANEL_HIMAX) += Himax/
 obj-$(CONFIG_TOUCHPANEL_SAMSUNG) += Samsung/
 obj-$(CONFIG_TOUCHPANEL_ILITEK) += ilitek/
 obj-$(CONFIG_TOUCHPANEL_ST) += St/
+subdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
 ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include

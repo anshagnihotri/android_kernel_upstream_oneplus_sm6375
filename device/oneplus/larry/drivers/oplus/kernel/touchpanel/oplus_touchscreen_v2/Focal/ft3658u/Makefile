@@ -9,3 +9,5 @@ oplus_bsp_tp_ft3658u-y += ft3658u_driver.o
 oplus_bsp_tp_ft3658u-y += ft3658u_test.o
 obj-$(CONFIG_TOUCHPANEL_FOCAL_FT3658U) += oplus_bsp_tp_ft3658u.o
 
+subdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
+ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include

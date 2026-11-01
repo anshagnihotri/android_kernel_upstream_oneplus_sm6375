@@ -11,3 +11,5 @@ obj-$(CONFIG_TOUCHPANEL_GOODIX) += oplus_bsp_tp_goodix_comnon.o
 #endif
 
 #endif
+subdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
+ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include

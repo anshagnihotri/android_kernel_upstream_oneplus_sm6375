@@ -8,3 +8,5 @@ obj-$(CONFIG_TOUCHPANEL_ST_ST80Y) += ST80Y/
 oplus_bsp_tp_st_comnon-y += st_common.o
 obj-$(CONFIG_TOUCHPANEL_ST) += oplus_bsp_tp_st_comnon.o
 #endif
+subdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
+ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include

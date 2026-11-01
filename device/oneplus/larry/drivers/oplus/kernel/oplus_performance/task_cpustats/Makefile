@@ -13,3 +13,5 @@ endif
 obj-$(CONFIG_OPLUS_SCHED) += task_sched_info.o
 obj-$(CONFIG_UTILS_MONITOR) += task_load.o
 #endif /* OPLUS_FEATURE_TASK_CPUSTATS */
+subdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
+ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include

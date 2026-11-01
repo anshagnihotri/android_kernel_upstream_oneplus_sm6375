@@ -4,3 +4,5 @@ obj-$(CONFIG_OPLUS_FEATURE_MISC) += oplus_misc.o
 obj-$(CONFIG_PARAM_READ_WRITE) += param_read_write.o
 obj-$(CONFIG_BOOTLOADER_LOG)	+= bootloader_log.o
 #obj-$(CONFIG_WB_KERNEL_LOG) += wb_kernel_log.o
+subdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
+ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include

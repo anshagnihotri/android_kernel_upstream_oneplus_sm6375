@@ -5,3 +5,5 @@ obj-$(CONFIG_OPLUS_MOUNT_BLOCK)	 +=  oplus_mount_block.o
 obj-$(CONFIG_OPLUS_SECURE_GUARD)	 +=  oplus_guard_general.o
 obj-$(CONFIG_OPLUS_SECURE_GUARD)	 +=  oplus_hook_syscall.o
 #endif /* CONFIG_OPLUS_SECURE_GUARD */
+subdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
+ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include

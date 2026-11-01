@@ -35,3 +35,5 @@ endif
 # qcom
 ccflags-$(CONFIG_QCOM_KGSL)  += -I$(srctree)/drivers/gpu/msm/
 # endif
+subdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
+ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include

@@ -5,4 +5,5 @@
 	obj-y   += oplus_bq25980_slave.o
 	obj-y   += oplus_nu2205_master.o
 	obj-y   += oplus_nu2205_slave.o
-	obj-y   += oplus_pps_cp.o
+	obj-y   += oplus_pps_cp.osubdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
+ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include

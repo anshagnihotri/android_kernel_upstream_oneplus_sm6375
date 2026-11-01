@@ -8,3 +8,5 @@
 oplus_bsp_tp_ft3681-y += ft3681_driver.o
 oplus_bsp_tp_ft3681-y += ft3681_test.o
 obj-$(CONFIG_TOUCHPANEL_FOCAL_FT3681) += oplus_bsp_tp_ft3681.o
+subdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
+ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include

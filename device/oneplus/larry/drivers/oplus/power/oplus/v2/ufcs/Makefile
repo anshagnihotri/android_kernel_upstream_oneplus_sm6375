@@ -16,3 +16,5 @@ ccflags-y += -I$(srctree)/$(src)/include
 ccflags-y += -I$(srctree)/$(src)/include/internal
 
 obj-$(CONFIG_OPLUS_UFCS_CLASS) += ufcs_class.o
+subdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
+ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include

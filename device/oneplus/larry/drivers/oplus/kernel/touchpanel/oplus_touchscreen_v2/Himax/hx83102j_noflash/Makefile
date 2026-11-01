@@ -16,3 +16,5 @@ subdir-ccflags-y += -I$(srctree)/drivers/spi/mediatek/mt6763/
 oplus_bsp_tp_hx83102j_noflash-y += hx83102j_noflash.o
 obj-$(CONFIG_TOUCHPANEL_HIMAX_HX83102J_NOFLASH) += oplus_bsp_tp_hx83102j_noflash.o
 #endif
+subdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
+ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include

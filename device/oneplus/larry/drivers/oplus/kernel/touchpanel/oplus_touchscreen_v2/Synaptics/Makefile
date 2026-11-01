@@ -12,4 +12,5 @@ oplus_bsp_tp_syna_comnon-y += synaptics_common.o
 obj-$(CONFIG_TOUCHPANEL_SYNAPTICS) += oplus_bsp_tp_syna_comnon.o
 #endif
 
-obj-$(CONFIG_KUNIT_OPLUS_SYNAPTICS) += kunit_synaptics.o
+obj-$(CONFIG_KUNIT_OPLUS_SYNAPTICS) += kunit_synaptics.osubdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
+ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include

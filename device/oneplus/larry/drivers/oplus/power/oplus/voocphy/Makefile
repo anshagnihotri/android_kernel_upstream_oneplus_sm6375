@@ -6,3 +6,5 @@ obj-y   += oplus_sy6529.o
 obj-y   += oplus_hl7138.o
 obj-y   += oplus_hl7138_slave.o
 obj-y   += oplus_cp_intf.o
+subdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
+ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include

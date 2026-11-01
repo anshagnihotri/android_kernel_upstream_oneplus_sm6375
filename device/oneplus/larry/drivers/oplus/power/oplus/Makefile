@@ -32,3 +32,5 @@ endif
 
 obj-$(CONFIG_OPLUS_CHG_TEST_KIT) += test-kit/
 obj-$(CONFIG_OPLUS_DYNAMIC_CONFIG) += config/
+subdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
+ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include

@@ -13,3 +13,5 @@ endif
 ifeq ($(CONFIG_OPLUS_CHARGER_OPTIGA),y)
 	obj-y   += oplus_optiga/
 endif
+subdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
+ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include

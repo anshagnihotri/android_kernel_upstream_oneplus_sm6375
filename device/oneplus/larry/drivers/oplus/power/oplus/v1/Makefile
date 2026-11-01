@@ -359,4 +359,5 @@ obj-y += oplus_ufcs.o
 obj-y += oplus_chg_exception.o
 obj-y += bob_ic/oplus_tps6128xd.o
 endif # gki_support
+subdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
 ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include

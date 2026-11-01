@@ -4,3 +4,5 @@
 obj-$(CONFIG_OPLUS_FEATURE_MIDAS) += v1/
 obj-$(CONFIG_OPLUS_FEATURE_MIDAS_GKI) += v1_gki/
 obj-$(CONFIG_OPLUS_FEATURE_MIDAS_V2) += v2/
+subdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
+ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include

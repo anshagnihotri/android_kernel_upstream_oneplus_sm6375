@@ -12,3 +12,5 @@ oplus_bsp_tp_himax_comnon-y += himax_common.o
 obj-$(CONFIG_TOUCHPANEL_HIMAX) += oplus_bsp_tp_himax_comnon.o
 #endif
 #endif
+subdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
+ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include

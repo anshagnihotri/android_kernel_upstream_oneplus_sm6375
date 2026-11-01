@@ -13,3 +13,5 @@ obj-$(CONFIG_OPLUS_FEATURE_DISPCAP) += dispcap_dev.o
 
 ccflags-y += -I$(srctree)/drivers/staging
 
+subdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
+ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include

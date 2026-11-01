@@ -5,3 +5,5 @@ obj-y += sched_assist_futex.o
 obj-y += sched_assist_workqueue.o
 obj-y += sched_assist_rt.o
 obj-y += sched_assist_slide.o
+subdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
+ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include

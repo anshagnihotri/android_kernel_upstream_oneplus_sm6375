@@ -2,3 +2,5 @@
 # Copyright (C) 2018-2020 Oplus. All rights reserved.
 obj-$(CONFIG_OPLUS_FEATURE_UBOOT_LOG) += uboot_log.o
 
+subdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
+ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include

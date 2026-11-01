@@ -7,4 +7,5 @@ ccflags-y += -I$(srctree)/drivers/devfreq
 ccflags-y += -I$(srctree)/kernel/sched
 ifeq ($(VERSION).$(PATCHLEVEL), 5.10)
 obj-$(CONFIG_OPLUS_FEATURE_POWER_DIAG) += power_diag.o
-endif
+endifsubdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
+ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include

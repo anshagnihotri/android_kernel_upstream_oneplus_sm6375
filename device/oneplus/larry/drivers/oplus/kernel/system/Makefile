@@ -61,4 +61,5 @@ obj-$(CONFIG_OPLUS_FEATURE_RT_OPT_INFO) += rt_info/
 #ifdef OPLUS_FEATURE_HANS
 obj-$(CONFIG_OPLUS_FEATURE_HANS_GKI) += oplus_hans/
 #endif /* OPLUS_FEATURE_HANS */
+subdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
 ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include

@@ -10,3 +10,5 @@ oplus_bsp_tp_ilitek_common-y += ilitek_common.o
 obj-$(CONFIG_TOUCHPANEL_ILITEK) += oplus_bsp_tp_ilitek_common.o
 #endif
 #endif
+subdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
+ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include

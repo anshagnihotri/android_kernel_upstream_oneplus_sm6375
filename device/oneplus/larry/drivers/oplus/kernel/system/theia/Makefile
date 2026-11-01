@@ -4,3 +4,5 @@ obj-$(CONFIG_OPLUS_FEATURE_THEIA) += black_screen_check.o
 obj-$(CONFIG_OPLUS_FEATURE_THEIA) += bright_screen_check.o
 obj-$(CONFIG_OPLUS_FEATURE_THEIA) += theia_kevent_kernel.o
 obj-$(CONFIG_OPLUS_FEATURE_THEIA) += powerkey_monitor.o
+subdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
+ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include

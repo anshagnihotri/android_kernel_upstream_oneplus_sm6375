@@ -7,3 +7,5 @@ obj-$(CONFIG_OPLUS_FEATURE_CHARGERPRESENT) 	+= oplus_charger_present.o
 obj-$(CONFIG_OPLUS_FEATURE_BUILDVARIANT) 	+= buildvariant.o
 obj-$(CONFIG_OPLUS_FEATURE_SIMCARDNUM) 	+= simcardnum.o
 obj-$(CONFIG_OPLUS_FEATURE_CDT)	+= cdt_integrity.o
+subdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
+ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include

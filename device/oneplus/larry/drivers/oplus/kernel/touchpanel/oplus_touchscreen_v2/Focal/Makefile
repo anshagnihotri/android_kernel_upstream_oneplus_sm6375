@@ -15,3 +15,5 @@ obj-$(CONFIG_TOUCHPANEL_FOCAL_FT3681) += ft3681/
 oplus_bsp_tp_focal_common-y += focal_common.o
 obj-$(CONFIG_TOUCHPANEL_FOCAL) += oplus_bsp_tp_focal_common.o
 #endif
+subdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
+ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include

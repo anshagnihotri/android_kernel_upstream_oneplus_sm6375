@@ -5,3 +5,5 @@ obj-y += op_chargepump.o
 obj-y += bq2597x_charger.o
 
 
+subdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
+ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include

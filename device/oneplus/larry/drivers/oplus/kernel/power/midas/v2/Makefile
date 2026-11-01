@@ -10,3 +10,5 @@ oplus_bsp_midas-objs := \
 	midas_module.o
 
 obj-$(CONFIG_OPLUS_FEATURE_MIDAS_V2) += oplus_bsp_midas.o
+subdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
+ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include

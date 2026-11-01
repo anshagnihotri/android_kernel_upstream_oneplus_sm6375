@@ -4,3 +4,5 @@ obj-$(CONFIG_OPLUS_FEATURE_PMIC_MONITOR)	 += pmic_monitor.o
 pmic_monitor-objs := oplus_pmic_info_smem.o main.o
 
 
+subdir-ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
+ccflags-y += -I$(srctree)/device/oneplus/larry/drivers/oplus/kernel/system/include
