@@ -70,7 +70,7 @@
 #endif
 
 #include "../ilitek_common.h"
-#include <soc/oplus/system/oplus_project.h>
+#include <../../../../../../../drivers/oplus/kernel/system/include/oplus_project.h>
 
 #define DRIVER_VERSION          "3.0.4.0.210730"
 

@@ -7,7 +7,7 @@
 #include <linux/sched/clock.h>
 #include <linux/signal.h>
 #include <linux/sched.h>
-#include <soc/oplus/system/oplus_project.h>
+#include <../../../../../../drivers/oplus/kernel/system/include/system/oplus_project.h>
 
 
 #ifdef CONFIG_OPLUS_FEATURE_DEATH_HEALER
