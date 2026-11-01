@@ -49,7 +49,9 @@ jobs:
           cd kernel_workspace
           
           echo "=> Generating defconfig..."
-          make O=out ARCH=arm64 CC=clang LLVM=1 LLVM_IAS=1 $DEFCONFIG
+          make O=out ARCH=arm64 CC=clang LLVM=1 LLVM_IAS=1 gki_defconfig
+          scripts/kconfig/merge_config.sh -O out -m out/.config arch/arm64/configs/vendor/larry_GKI.config
+          make O=out ARCH=arm64 CC=clang LLVM=1 LLVM_IAS=1 olddefconfig
           
           echo "=> Compiling kernel and modules..."
           make O=out ARCH=arm64 CC=clang LLVM=1 LLVM_IAS=1 CROSS_COMPILE=aarch64-linux-gnu- CROSS_COMPILE_COMPAT=arm-linux-gnueabi- -j2
