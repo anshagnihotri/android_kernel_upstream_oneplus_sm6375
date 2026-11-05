@@ -18,7 +18,7 @@
 #ifndef CONFIG_OPLUS_CHARGER_MTK
 #include <linux/usb/typec.h>
 #if (LINUX_VERSION_CODE < KERNEL_VERSION(5, 15, 0))
-#include <linux/usb/usbpd.h>
+#include <linux/usb/pd.h>
 #endif
 #endif
 #include <linux/random.h>

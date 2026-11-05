@@ -29,7 +29,7 @@
 #include <linux/kthread.h>
 #include <soc/oplus/system/oplus_project.h>
 #include <linux/usb/typec.h>
-#include <linux/usb/usbpd.h>
+#include <linux/usb/pd.h>
 
 //#include "oplus_battery_msm7250.h"
 #include "../../supply/qcom/smb5-reg.h"

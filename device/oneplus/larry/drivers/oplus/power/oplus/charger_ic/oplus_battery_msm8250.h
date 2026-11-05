@@ -21,7 +21,7 @@
 #include <linux/jiffies.h>
 #include <linux/sched/clock.h>
 #include <linux/usb/typec.h>
-#include <linux/usb/usbpd.h>
+#include <linux/usb/pd.h>
 #endif
 
 enum print_reason {

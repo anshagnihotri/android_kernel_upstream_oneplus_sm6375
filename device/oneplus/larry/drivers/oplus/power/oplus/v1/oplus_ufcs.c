@@ -34,7 +34,7 @@
 #include <linux/slab.h>
 #include <linux/spinlock.h>
 #include <linux/usb/typec.h>
-#include <linux/usb/usbpd.h>
+#include <linux/usb/pd.h>
 
 #include <linux/bitops.h>
 #include <linux/debugfs.h>

@@ -45,7 +45,7 @@
 #include <linux/iio/consumer.h>
 #include <linux/kthread.h>
 #include <linux/usb/typec.h>
-#include <linux/usb/usbpd.h>
+#include <linux/usb/pd.h>
 //#include <soc/oplus/system/boot_mode.h>
 //#include <soc/oplus/device_info.h>
 #include <soc/oplus/system/oplus_project.h>

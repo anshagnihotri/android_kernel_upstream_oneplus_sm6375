@@ -9,7 +9,7 @@
 #include <linux/list.h>
 #ifndef CONFIG_OPLUS_CHARGER_MTK
 #include <linux/usb/typec.h>
-#include <linux/usb/usbpd.h>
+#include <linux/usb/pd.h>
 #endif
 #include <linux/random.h>
 #include <linux/device.h>
