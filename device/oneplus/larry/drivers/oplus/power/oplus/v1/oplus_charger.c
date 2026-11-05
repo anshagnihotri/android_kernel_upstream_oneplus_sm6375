@@ -3064,8 +3064,8 @@ static void oplus_chg_show_ui_soc_decimal(struct work_struct *work)
 		speed = 500;
 	}
 	chip->ui_soc_decimal += speed;
-	pr_err("[oplus_chg_ui_soc_decimal]chip->ui_soc_decimal+chip_ui_soc: %d , speed: %d, soc :%ld\n ",
-	       (chip->ui_soc_decimal + chip->ui_soc_integer), speed, ((chip->batt_rm * 100000) / chip->batt_fcc));
+	pr_err("[oplus_chg_ui_soc_decimal]chip->ui_soc_decimal+chip_ui_soc: %d , speed: %d, soc :%d\n ",
+	       (int)(chip->ui_soc_decimal + chip->ui_soc_integer), (int)speed, (int)((chip->batt_rm * 100000) / chip->batt_fcc));
 	if (chip->ui_soc_integer + chip->ui_soc_decimal >= 100000) {
 		chip->ui_soc_integer = 100000;
 		chip->ui_soc_decimal = 0;
@@ -10084,7 +10084,7 @@ static void oplus_chg_update_ui_soc(struct oplus_chg_chip *chip)
 				}
 
 				if (chip->ui_soc != ui_soc_pre)
-					chg_err("sleep_tm %d %d %d %d %d %d %d %d %d\n", sleep_tm, soc_reduce_margin,
+					chg_err("sleep_tm %lu %lu %lu %d %d %d %d %d %d\n", sleep_tm, soc_reduce_margin,
 						chip->save_sleep_tm_sec, chip->soc, chip->smooth_soc, chip->ui_soc,
 						ui_soc_pre, soc_down_count, soc_down_limit);
 			}
@@ -15057,7 +15057,7 @@ void oplus_chg_check_break(int vbus_rising)
 		    oplus_chg_get_voocphy_support() == AP_DUAL_CP_VOOCPHY) {
 			oplus_voocphy_get_dbg_info();
 		}
-		chg_err("svooc_detach_time = %d\n", (unsigned long long)chip->svooc_detach_time);
+		chg_err("svooc_detach_time = %llu\n", (unsigned long long)chip->svooc_detach_time);
 	}
 	return;
 }
