@@ -56,7 +56,7 @@ struct op10_chip {
 	struct i2c_client *client;
 	struct device *dev;
 	struct oplus_chg_ic_dev *ic_dev;
-	struct manufacture_info manufacture_info;
+	// struct manufacture_info manufacture_info;
 
 	const struct firmware *fw;
 	const unsigned char *firmware_data;
@@ -81,7 +81,7 @@ request_firmware_select(const struct firmware **firmware_p, const char *name,
 	return 1;
 }
 int __attribute__((weak))
-register_devinfo(char *name, struct manufacture_info *info)
+register_devinfo(char *name, // struct manufacture_info *info)
 {
 	return 1;
 }
@@ -90,7 +90,7 @@ __attribute__((weak)) int
 request_firmware_select(const struct firmware **firmware_p, const char *name,
 			struct device *device);
 __attribute__((weak)) int register_devinfo(char *name,
-					   struct manufacture_info *info);
+					   // struct manufacture_info *info);
 #endif
 
 static int op10_parse_fw_data_by_bin(struct op10_chip *chip);

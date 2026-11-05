@@ -256,7 +256,7 @@ struct oplus_vooc_chip {
 	int vooc_fw_type;
 	int fw_update_flag;
 #ifndef CONFIG_DISABLE_OPLUS_FUNCTION
-	struct manufacture_info manufacture_info;
+	// struct manufacture_info manufacture_info;
 #endif
 	bool vooc_fw_update_newmethod;
 	char *fw_path;

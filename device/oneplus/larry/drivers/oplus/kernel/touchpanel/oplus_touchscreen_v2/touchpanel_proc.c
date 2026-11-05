@@ -21,7 +21,7 @@
 #include "touch_comon_api/touch_comon_api.h"
 
 
-#ifndef CONFIG_REMOVE_OPLUS_FUNCTION
+#if 0
 #ifdef CONFIG_TOUCHPANEL_MTK_PLATFORM
 #include<mt-plat/mtk_boot_common.h>
 #else
@@ -36,15 +36,15 @@
 /*******Part1:LOG TAG Declear************************/
 
 /*******Part2:declear Area********************************/
-#ifndef CONFIG_REMOVE_OPLUS_FUNCTION
-/*extern int register_devinfo(char *name, struct manufacture_info *info);*/
+#if 0
+/*extern int register_devinfo(char *name, // struct manufacture_info *info);*/
 /*extern int register_device_proc(char *name, char *version, char *manufacture);*/
 int __attribute__((weak)) register_device_proc(char *name, char *version, char *vendor)
 {
 	return 0;
 }
 
-int __attribute__((weak)) register_devinfo(char *name, struct manufacture_info *info)
+int __attribute__((weak)) register_devinfo(char *name, // struct manufacture_info *info)
 {
 	return 0;
 }

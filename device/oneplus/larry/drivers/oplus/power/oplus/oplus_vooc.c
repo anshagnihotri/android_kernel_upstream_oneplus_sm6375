@@ -67,7 +67,7 @@ request_firmware_select(const struct firmware **firmware_p, const char *name, st
 {
 	return 1;
 }
-int __attribute__((weak)) register_devinfo(char *name, struct manufacture_info *info)
+int __attribute__((weak)) register_devinfo(char *name, // struct manufacture_info *info)
 {
 	return 1;
 }
@@ -75,7 +75,7 @@ int __attribute__((weak)) register_devinfo(char *name, struct manufacture_info *
 __attribute__((weak)) int request_firmware_select(const struct firmware **firmware_p, const char *name,
 						  struct device *device);
 #ifndef CONFIG_DISABLE_OPLUS_FUNCTION
-__attribute__((weak)) int register_devinfo(char *name, struct manufacture_info *info);
+__attribute__((weak)) int register_devinfo(char *name, // struct manufacture_info *info);
 #endif
 #endif
 

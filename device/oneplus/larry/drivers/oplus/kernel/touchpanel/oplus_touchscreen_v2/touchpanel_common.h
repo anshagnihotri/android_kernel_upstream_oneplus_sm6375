@@ -22,7 +22,7 @@
 #define PM_QOS_TOUCH_WAKEUP_VALUE 400
 #endif
 
-#ifndef CONFIG_REMOVE_OPLUS_FUNCTION
+#if 0
 #include <../../../../../drivers/oplus/kernel/system/include/device_info.h>
 #endif
 
@@ -373,8 +373,8 @@ struct panel_info {
 	int    chip_num;
 	struct firmware_headfile  firmware_headfile;
 	/*firmware headfile for noflash ic*/
-#ifndef CONFIG_REMOVE_OPLUS_FUNCTION
-	struct manufacture_info manufacture_info;       /*touchpanel device info*/
+#if 0
+	// struct manufacture_info manufacture_info;       /*touchpanel device info*/
 #endif
 };
 
