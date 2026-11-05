@@ -1051,7 +1051,7 @@ struct oplus_chg_chip {
 	struct oplus_chg_mod *wls_ocm;
 	struct oplus_chg_mod *comm_ocm;
 #ifndef CONFIG_OPLUS_CHARGER_MTK
-	struct qcom_pmic pmic_spmi;
+	// struct qcom_pmic pmic_spmi;
 #endif
 #ifdef CONFIG_OPLUS_CHARGER_MTK_CHGIC
 	struct mtk_pmic chgic_mtk;
@@ -1585,7 +1585,7 @@ struct oplus_chg_operations {
 	void (*rerun_aicl)(void);
 	int (*tlim_en)(bool);
 	int (*set_system_temp_level)(int);
-	int (*otg_pulse_skip_disable)(enum skip_reason, bool);
+	// int (*otg_pulse_skip_disable)(enum skip_reason, bool);
 	int (*set_dp_dm)(int);
 	int (*calc_flash_current)(void);
 	void (*subcharger_force_enable)(void);

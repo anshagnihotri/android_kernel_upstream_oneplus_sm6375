@@ -517,7 +517,7 @@ static void register_adapter_devinfo(void)
 	version = "adapter";
 	manufacture = "stm8s";
 
-	ret = register_device_proc("adapter", version, manufacture);
+	// ret = register_device_proc("adapter", version, manufacture);
 	if (ret)
 		chg_err("register_adapter_devinfo fail\n");
 #endif
