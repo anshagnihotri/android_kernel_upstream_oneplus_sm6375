@@ -1051,7 +1051,7 @@ struct oplus_chg_chip {
 	struct oplus_chg_mod *wls_ocm;
 	struct oplus_chg_mod *comm_ocm;
 #ifndef CONFIG_OPLUS_CHARGER_MTK
-	// struct qcom_pmic pmic_spmi;
+	struct qcom_pmic pmic_spmi;
 #endif
 #ifdef CONFIG_OPLUS_CHARGER_MTK_CHGIC
 	struct mtk_pmic chgic_mtk;
