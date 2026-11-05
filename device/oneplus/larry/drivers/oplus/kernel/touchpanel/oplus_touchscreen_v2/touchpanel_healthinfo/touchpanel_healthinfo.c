@@ -811,8 +811,8 @@ int tp_touch_healthinfo_handle(struct monitor_data *monitor_data,
 							TPD_DETAIL("long swipe:[%d %d] to [%d %d], dis:%d to %d.\n",
 								   monitor_data->points_state[i].last_point.x,
 								   monitor_data->points_state[i].last_point.y, points[i].x, points[i].y,
-								   int_sqrt(monitor_data->points_state[i].last_swipe_distance_sq),
-								   int_sqrt(dist_sq));
+								   (int)int_sqrt(monitor_data->points_state[i].last_swipe_distance_sq),
+								   (int)int_sqrt(dist_sq));
 						}
 
 						monitor_data->points_state[i].last_swipe_distance_sq = dist_sq;
