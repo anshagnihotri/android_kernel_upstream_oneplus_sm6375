@@ -14821,11 +14821,11 @@ static void get_time_interval(void)
 		return;
 	} else {
 		g_charger_chip->second_ktime = ktime_to_ms(ktime_get_boottime()) / 1000;
-		chg_err("[soc_ajust_feature]:interval[%d], [%d]\n", g_charger_chip->first_ktime,
-			g_charger_chip->second_ktime);
+		chg_err("[soc_ajust_feature]:interval[%lld], [%lld]\n", (long long)g_charger_chip->first_ktime,
+			(long long)g_charger_chip->second_ktime);
 		if ((g_charger_chip->second_ktime - g_charger_chip->first_ktime) >= TIME_INTERVALE_S) {
-			chg_err("[soc_ajust_feature]:set_interval[%d], [%d]\n", g_charger_chip->first_ktime,
-				g_charger_chip->second_ktime);
+			chg_err("[soc_ajust_feature]:set_interval[%lld], [%lld]\n", (long long)g_charger_chip->first_ktime,
+				(long long)g_charger_chip->second_ktime);
 			soc_modfiy_callback();
 			g_charger_chip->first_ktime = g_charger_chip->second_ktime;
 		}
@@ -15045,8 +15045,8 @@ void oplus_chg_check_break(int vbus_rising)
 			}
 			chip->svooc_disconnect_count = 0;
 		}
-		chg_err("svooc_detect_time = %d, chg->svooc_detach_time = %d\n", chip->svooc_detect_time,
-			chip->svooc_detach_time);
+		chg_err("svooc_detect_time = %llu, chg->svooc_detach_time = %llu\n", (unsigned long long)chip->svooc_detect_time,
+			(unsigned long long)chip->svooc_detach_time);
 		chip->svooc_detect_time = 0;
 		chip->svooc_detach_time = 0;
 		oplus_vooc_set_detach_unexpectly(false);
@@ -15057,7 +15057,7 @@ void oplus_chg_check_break(int vbus_rising)
 		    oplus_chg_get_voocphy_support() == AP_DUAL_CP_VOOCPHY) {
 			oplus_voocphy_get_dbg_info();
 		}
-		chg_err("svooc_detach_time = %d\n", chip->svooc_detach_time);
+		chg_err("svooc_detach_time = %d\n", (unsigned long long)chip->svooc_detach_time);
 	}
 	return;
 }
@@ -15583,9 +15583,9 @@ static void quick_mode_check(void)
 	chip->quick_mode_gain_time_ms = chip->quick_mode_gain_time_ms + gain_time_ms;
 
 	chg_err("quick_mode_gain_time_ms:%d, start_cap:%d, stop_cap:%d, "
-		"start_time:%d, stop_time:%d, diff_time:%d, gain_time_ms:%d\n",
+		"start_time:%ld, stop_time:%ld, diff_time:%d, gain_time_ms:%d\n",
 		chip->quick_mode_gain_time_ms, chip->quick_mode_start_cap, chip->quick_mode_stop_cap,
-		chip->quick_mode_start_time, chip->quick_mode_time.tv_sec, diff_time, gain_time_ms);
+		(long)chip->quick_mode_start_time, (long)chip->quick_mode_time.tv_sec, diff_time, gain_time_ms);
 }
 
 void oplus_first_enable_adsp_voocphy(void)
