@@ -46,7 +46,7 @@ ssize_t tp_test_write(void *data_start, size_t max_count,
 	}
 
 	if (*pos >= max_count) {
-		TPD_INFO("%s: pos:%ld is out of memory\n", *pos, __func__);
+		TPD_INFO("%s: pos:%ld is out of memory\n", __func__, (long)*pos);
 		return -1;
 	}
 
@@ -727,7 +727,7 @@ int tp_black_screen_test(struct file *file, char __user *buffer, size_t count,
 	int msg_size = MESSAGE_SIZE;
 	int error_count = 0;
 
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (!ts || !ts->gesture_test.flag) {
 		return 0;
@@ -834,7 +834,7 @@ int tp_auto_test_result(struct seq_file *s, void *v)
 {
 	struct touchpanel_data *ts = s->private;
 
-	TP_INFO(ts->tp_index, "%s:s->size:%d,s->count:%d\n", __func__, s->size,
+	TP_INFO(ts->tp_index, "%s:s->size:%zu,s->count:%zu\n", __func__, s->size,
 		s->count);
 	mutex_lock(&ts->mutex);
 
@@ -870,7 +870,7 @@ int tp_black_screen_result(struct seq_file *s, void *v)
 {
 	struct touchpanel_data *ts = s->private;
 
-	TP_INFO(ts->tp_index, "%s:s->size:%d,s->count:%d\n", __func__, s->size,
+	TP_INFO(ts->tp_index, "%s:s->size:%zu,s->count:%zu\n", __func__, s->size,
 		s->count);
 
 	mutex_lock(&ts->mutex);

@@ -1205,7 +1205,7 @@ int tp_alloc_healthinfo_handle(struct monitor_data *monitor_data,
 	char *report = NULL;
 	char *func = NULL;
 #endif /*CONFIG_TOUCHPANEL_OPLUS*/
-	struct stackframe frame;
+	// struct stackframe frame;
 
 	if (!monitor_data) {
 		return 0;
@@ -1231,20 +1231,20 @@ int tp_alloc_healthinfo_handle(struct monitor_data *monitor_data,
 		TPD_INFO("alloc_err_size [%ld - %ld].\n", monitor_data->min_alloc_err_size,
 			 monitor_data->max_alloc_err_size);
 
-		frame.fp = (unsigned long)__builtin_frame_address(0);
+		// frame.fp = (unsigned long)__builtin_frame_address(0);
 #if LINUX_VERSION_CODE <= KERNEL_VERSION(4, 9, 0)
 		frame.sp = current_stack_pointer;
 #endif
-		frame.pc = (unsigned long)tp_alloc_healthinfo_handle;
+		// frame.pc = (unsigned long)tp_alloc_healthinfo_handle;
 
 #if LINUX_VERSION_CODE < KERNEL_VERSION(5, 15, 0)
-                start_backtrace(&frame,
+                // start_backtrace(&frame,
                                 (unsigned long)__builtin_frame_address(0),
                                 (unsigned long)tp_alloc_healthinfo_handle);
 #endif
 		while (deep--) {
 #if IS_BUILTIN(CONFIG_TOUCHPANEL_OPLUS)
-			ret = unwind_frame(current, &frame);
+			// ret = unwind_frame(current, &frame);
 #else
 			ret = -1;
 #endif
