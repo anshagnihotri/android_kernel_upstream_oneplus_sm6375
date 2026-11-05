@@ -3862,7 +3862,7 @@ int oplus_chg_init(struct oplus_chg_chip *chip)
 	chip->batt_psy = batt_psy;
 
 #ifndef CONFIG_OPLUS_CHARGER_MTK
-	chip->pmic_spmi.psy_registered = true;
+	// chip->pmic_spmi.psy_registered = true;
 #endif
 
 	chip->flash_led_status = false;
@@ -8084,7 +8084,7 @@ void oplus_chg_variables_reset(struct oplus_chg_chip *chip, bool in)
 	efttest_count = 1;
 	high_vol_light = 0;
 #ifndef CONFIG_OPLUS_CHARGER_MTK
-	chip->pmic_spmi.aicl_suspend = false;
+	// chip->pmic_spmi.aicl_suspend = false;
 #endif
 	oplus_chg_battery_authenticate_check(chip);
 	chip->chargerid_volt = 0;
@@ -9134,7 +9134,7 @@ static void oplus_chg_check_aicl_input_limit(struct oplus_chg_chip *chip)
 	if (chip->charging_state == CHARGING_STATUS_FAIL || chip->batt_full == true ||
 	    ((chip->tbatt_status != BATTERY_STATUS__NORMAL) &&
 	     (chip->tbatt_status != BATTERY_STATUS__LITTLE_COOL_TEMP)) ||
-	    ((chip->ui_soc > 85) && (chip->pmic_spmi.aicl_suspend == false)) ||
+	    ((chip->ui_soc > 85)) ||
 	    oplus_vooc_get_fastchg_started() == true) {
 		aicl_delay_count = 0;
 		return;
@@ -9145,7 +9145,7 @@ static void oplus_chg_check_aicl_input_limit(struct oplus_chg_chip *chip)
 			charger_xlog_printk(CHG_LOG_CRTI, "15 minutes aicl\n");
 			oplus_chg_set_input_current_limit(chip);
 		}
-	} else if (chip->pmic_spmi.aicl_suspend == true && chip->charger_volt > 4450 && chip->charger_volt < 5800) {
+	} else if (0) {
 		aicl_delay_count = 0;
 		if (oplus_vooc_get_allow_reading() == true) {
 			chip->chg_ops->rerun_aicl();
@@ -9156,15 +9156,15 @@ static void oplus_chg_check_aicl_input_limit(struct oplus_chg_chip *chip)
 		aicl_delay_count++;
 	}
 	if (chip->charger_type == POWER_SUPPLY_TYPE_USB || chip->charger_type == POWER_SUPPLY_TYPE_USB_CDP) {
-		chip->pmic_spmi.usb_hc_count++;
-		if (chip->pmic_spmi.usb_hc_count >= 3) {
-			chip->pmic_spmi.usb_hc_mode = true;
-			chip->pmic_spmi.usb_hc_count = 3;
+		// chip->pmic_spmi.usb_hc_count++;
+		if (0) {
+			// chip->pmic_spmi.usb_hc_mode = true;
+			// chip->pmic_spmi.usb_hc_count = 3;
 		}
 	}
-	if (oplus_vooc_get_allow_reading() == true && chip->pmic_spmi.usb_hc_mode && !chip->pmic_spmi.hc_mode_flag) {
+	if (0) {
 		oplus_chg_set_input_current_limit(chip);
-		chip->pmic_spmi.hc_mode_flag = true;
+		// chip->pmic_spmi.hc_mode_flag = true;
 	}
 #endif
 }
