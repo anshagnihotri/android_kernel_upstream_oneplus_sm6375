@@ -80,7 +80,7 @@ static ssize_t proc_optimized_time_write(struct file *file,
 {
 	int value = 0;
 	char buf[5] = {0};
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (!ts) {
 		TPD_INFO("%s error:file_inode.\n", __func__);
@@ -106,7 +106,7 @@ static ssize_t proc_optimized_time_read(struct file *file,
 {
 	int ret = 0;
 	char page[PAGESIZE] = {0};
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (!ts) {
 		snprintf(page, PAGESIZE - 1, "%d\n", -1); /*error handler*/
@@ -192,7 +192,7 @@ static ssize_t proc_debug_level_write(struct file *file,
 				      const char __user *buffer, size_t count, loff_t *ppos)
 {
 #ifdef CONFIG_OPLUS_TP_APK
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 #endif /* end of CONFIG_OPLUS_TP_APK*/
 
 	int tmp = 0;
@@ -214,7 +214,7 @@ static ssize_t proc_debug_level_write(struct file *file,
 	}
 
 	tp_debug = tmp;
-	touch_misc_state_change(PDE_DATA(file_inode(file)), IOC_STATE_DEBUG_LEVEL, tp_debug);
+	touch_misc_state_change(pde_data(file_inode(file)), IOC_STATE_DEBUG_LEVEL, tp_debug);
 #ifdef CONFIG_OPLUS_TP_APK
 
 	if (ts && ts->apk_op && ts->apk_op->apk_debug_set) {
@@ -243,7 +243,7 @@ static ssize_t proc_gesture_control_write(struct file *file,
 {
 	int value = 0;
 	char buf[4] = {0};
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (!ts) {
 		return count;
@@ -286,7 +286,7 @@ static ssize_t proc_gesture_control_read(struct file *file, char __user *buffer,
 	int ret = 0;
 	int value = 0;
 	char page[PAGESIZE] = {0};
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (!ts) {
 		return 0;
@@ -313,7 +313,7 @@ static ssize_t proc_gesture_control_indep_write(struct file *file, const char __
 {
 	int value = 0;
 	char buf[9] = {0};
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (count > 8) {
 		return count;
@@ -347,7 +347,7 @@ static ssize_t proc_gesture_control_indep_read(struct file *file, char __user *u
 {
 	int ret = 0;
 	char page[PAGESIZE] = {0};
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (!ts) {
 		return 0;
@@ -373,7 +373,7 @@ static ssize_t proc_coordinate_read(struct file *file, char __user *buffer,
 {
 	int ret = 0;
 	char page[PAGESIZE] = {0};
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (!ts) {
 		return 0;
@@ -412,7 +412,7 @@ static ssize_t proc_game_switch_write(struct file *file,
 	int value = 0;
 	char buf[100] = {0};
         char *ptr = NULL;
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (!ts) {
 		TPD_INFO("%s: ts is NULL\n", __func__);
@@ -479,7 +479,7 @@ static ssize_t proc_game_switch_read(struct file *file, char __user *buffer,
 {
 	int ret = 0;
 	char page[PAGESIZE] = {0};
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (!ts) {
 		snprintf(page, PAGESIZE - 1, "%d\n", -1); /*no support*/
@@ -504,7 +504,7 @@ static ssize_t proc_get_irq_depth_read(struct file *file, char __user *buffer,
 {
 	int ret = 0;
 	char page[PAGESIZE] = {0};
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 	struct irq_desc *desc = NULL;
 
 	if (!ts) {
@@ -528,7 +528,7 @@ static ssize_t proc_irq_status_write(struct file *file,
 {
 	int value = 0;
 	char buf[4] = {0};
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (!ts) {
 		return count;
@@ -561,7 +561,7 @@ static ssize_t proc_noise_modetest_read(struct file *file, char __user *buffer,
 {
 	ssize_t ret = 0;
 	char page[PAGESIZE] = {0};
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (!ts || !ts->ts_ops->get_noise_modetest) {
 		return 0;
@@ -579,7 +579,7 @@ static ssize_t proc_noise_modetest_write(struct file *file,
 {
 	char buf[8] = {0};
 	int temp = 0;
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (!ts) {
 		return count;
@@ -616,7 +616,7 @@ DECLARE_PROC_OPS(proc_noise_modetest_fops, simple_open, proc_noise_modetest_read
 static ssize_t proc_fw_update_write(struct file *file,
 				    const char __user *buffer, size_t count, loff_t *ppos)
 {
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 	int val = 0;
 	int ret = 0;
 	char buf[4] = {0};
@@ -694,7 +694,7 @@ static ssize_t proc_register_info_read(struct file *file, char __user *buffer,
 	int i = 0;
 	ssize_t num_read_chars = 0;
 	char page[PAGESIZE] = {0};
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (!ts) {
 		return 0;
@@ -741,7 +741,7 @@ static ssize_t proc_register_info_write(struct file *file,
 {
 	int addr = 0, length = 0;
 	char buf[16] = {0};
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (!ts) {
 		TPD_INFO("ts not exist!\n");
@@ -767,7 +767,7 @@ static ssize_t proc_incell_panel_info_read(struct file *file,
 {
 	uint8_t ret = 0;
 	char page[PAGESIZE] = {0};
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	snprintf(page, PAGESIZE - 1, "%d", ts->is_incell_panel);
 	ret = simple_read_from_buffer(buffer, count, ppos, page, strlen(page));
@@ -787,7 +787,7 @@ static ssize_t proc_fd_enable_write(struct file *file,
 {
 	int value = 0;
 	char buf[4] = {0};
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (!ts) {
 		return count;
@@ -838,7 +838,7 @@ static ssize_t proc_fd_enable_read(struct file *file, char __user *buffer,
 {
 	int ret = 0;
 	char page[PAGESIZE] = {0};
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (!ts) {
 		return 0;
@@ -863,7 +863,7 @@ static ssize_t proc_event_num_read(struct file *file, char __user *buffer,
 	int ret = 0;
 	const char *devname = NULL;
 	struct input_handle *handle;
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (!ts) {
 		return 0;
@@ -895,7 +895,7 @@ static ssize_t proc_fd_touch_read(struct file *file, char __user *buffer,
 {
 	int ret = 0;
 	char page[PAGESIZE] = {0};
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (!ts) {
 		return 0;
@@ -922,7 +922,7 @@ static ssize_t proc_fp_enable_write(struct file *file,
 {
 	int value = 0;
 	char buf[4] = {0};
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (!ts) {
 		return count;
@@ -979,7 +979,7 @@ static ssize_t proc_fp_enable_read(struct file *file, char __user *buffer,
 {
 	int ret = 0;
 	char page[PAGESIZE] = {0};
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (!ts) {
 		return 0;
@@ -1005,7 +1005,7 @@ static int tp_auto_test_read_func(struct seq_file *s, void *v)
 
 static int baseline_autotest_open(struct inode *inode, struct file *file)
 {
-	return single_open(file, tp_auto_test_read_func, PDE_DATA(inode));
+	return single_open(file, tp_auto_test_read_func, pde_data(inode));
 }
 
 DECLARE_PROC_OPS(tp_auto_test_proc_fops, baseline_autotest_open, seq_read, NULL, single_release);
@@ -1026,7 +1026,7 @@ static ssize_t proc_black_screen_test_write(struct file *file,
 {
 	int value = 0;
 	char buf[4] = {0};
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (!ts) {
 		return count;
@@ -1061,7 +1061,7 @@ static int tp_auto_test_result_read(struct seq_file *s, void *v)
 
 static int tp_auto_test_result_open(struct inode *inode, struct file *file)
 {
-	return single_open(file, tp_auto_test_result_read, PDE_DATA(inode));
+	return single_open(file, tp_auto_test_result_read, pde_data(inode));
 }
 
 DECLARE_PROC_OPS(tp_auto_test_result_fops, tp_auto_test_result_open, seq_read, NULL, single_release);
@@ -1078,7 +1078,7 @@ static int tp_black_screen_result_read(struct seq_file *s, void *v)
 
 static int tp_black_screen_result_open(struct inode *inode, struct file *file)
 {
-	return single_open(file, tp_black_screen_result_read, PDE_DATA(inode));
+	return single_open(file, tp_black_screen_result_read, pde_data(inode));
 }
 
 DECLARE_PROC_OPS(proc_black_screen_result_fops, tp_black_screen_result_open, seq_read, NULL, single_release);
@@ -1094,7 +1094,7 @@ static ssize_t proc_dir_control_read(struct file *file, char __user *user_buf,
 {
 	ssize_t ret = 0;
 	char page[PAGESIZE] = {0};
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (!ts) {
 		return 0;
@@ -1114,7 +1114,7 @@ static ssize_t proc_dir_control_write(struct file *file,
 	char buf[8] = {0};
 	int temp = 0;
 	int ret = 0;
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (!ts) {
 		return count;
@@ -1157,7 +1157,7 @@ static ssize_t proc_rate_white_list_write(struct file *file,
 {
 	int value = 0;
 	char buf[4] = {0};
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (count > 4) {
 		TPD_INFO("%s:count > 4\n", __func__);
@@ -1204,7 +1204,7 @@ static ssize_t proc_rate_white_list_read(struct file *file,
 {
 	int ret = 0;
 	char page[PAGESIZE] = {0};
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (!ts) {
 		snprintf(page, PAGESIZE - 1, "%d\n", -1); /*no support*/
@@ -1223,7 +1223,7 @@ static ssize_t proc_switch_usb_state_write(struct file *file, const char __user 
 {
 	int usb_state = 0;
 	char buf[4] = {0};
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (count > 4) {
 		TPD_INFO("%s:count > 4\n", __func__);
@@ -1261,7 +1261,7 @@ static ssize_t proc_switch_usb_state_read(struct file *file,
 {
 	int ret = 0;
 	char page[PAGESIZE] = {0};
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (!ts) {
 		snprintf(page, PAGESIZE - 1, "%d\n", -1); /*no support*/
@@ -1281,7 +1281,7 @@ static ssize_t proc_wireless_charge_detect_write(struct file *file,
 {
 	int wireless_state = 0;
 	char buf[4] = {0};
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (count > 4) {
 		TPD_INFO("%s:count > 4\n", __func__);
@@ -1330,7 +1330,7 @@ static ssize_t proc_wireless_charge_detect_read(struct file *file,
 {
 	int ret = 0;
 	char page[PAGESIZE] = {0};
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (!ts) {
 		snprintf(page, PAGESIZE - 1, "%d\n", -1); /*no support*/
@@ -1350,7 +1350,7 @@ static ssize_t proc_headset_detect_write(struct file *file,
 {
 	int headset_state = 0;
 	char buf[4] = {0};
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (count > 4) {
 		TPD_INFO("%s:count > 4\n", __func__);
@@ -1386,7 +1386,7 @@ static ssize_t proc_headset_detect_read(struct file *file,
 {
 	int ret = 0;
 	char page[PAGESIZE] = {0};
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (!ts) {
 		snprintf(page, PAGESIZE - 1, "%d\n", -1); /*no support*/
@@ -1405,7 +1405,7 @@ DECLARE_PROC_OPS(proc_headset_detect_fops, simple_open, proc_headset_detect_read
 static ssize_t proc_aging_test_read(struct file *file, char __user *user_buf,
 				    size_t count, loff_t *ppos)
 {
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 	uint8_t ret = 0;
 	char page[PAGESIZE] = {0};
 
@@ -1439,7 +1439,7 @@ static ssize_t proc_aging_test_read(struct file *file, char __user *user_buf,
 static ssize_t proc_aging_test_write(struct file *file,
 				     const char __user *buffer, size_t count, loff_t *ppos)
 {
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 	int val = 0;
 	char buf[4] = {0};
 
@@ -1498,7 +1498,7 @@ static ssize_t proc_smooth_level_write(struct file *file, const char __user *buf
 {
     int value = 0, raw_level = 0;
     char buf[5] = {0};
-    struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+    struct touchpanel_data *ts = pde_data(file_inode(file));
 
     if (count > 5) {
         TPD_INFO("%s:count > 5\n", __func__);
@@ -1556,7 +1556,7 @@ static ssize_t proc_smooth_level_read(struct file *file, char __user *user_buf, 
 {
     int ret = 0;
     char page[PAGESIZE] = {0};
-    struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+    struct touchpanel_data *ts = pde_data(file_inode(file));
 
     if (ts && ts->smooth_level_array_support) {
         snprintf(page, PAGESIZE - 1, "%u\n", ts->smooth_level_chosen); //support
@@ -1573,7 +1573,7 @@ static ssize_t proc_sensitive_level_write(struct file *file, const char __user *
 {
     int value = 0, raw_level = 0;
     char buf[5] = {0};
-    struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+    struct touchpanel_data *ts = pde_data(file_inode(file));
 
     if (count > 5) {
         TPD_INFO("%s:count > 5\n", __func__);
@@ -1627,7 +1627,7 @@ static ssize_t proc_sensitive_level_read(struct file *file, char __user *user_bu
 {
     int ret = 0;
     char page[PAGESIZE] = {0};
-    struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+    struct touchpanel_data *ts = pde_data(file_inode(file));
 
     if (!ts || !ts->sensitive_level_array_support) {
         snprintf(page, PAGESIZE - 1, "%d\n", -1); //no support
@@ -1665,7 +1665,7 @@ static int calibrate_fops_read_func(struct seq_file *s, void *v)
 
 static int proc_calibrate_fops_open(struct inode *inode, struct file *file)
 {
-	return single_open(file, calibrate_fops_read_func, PDE_DATA(inode));
+	return single_open(file, calibrate_fops_read_func, pde_data(inode));
 }
 
 DECLARE_PROC_OPS(proc_calibrate_fops, proc_calibrate_fops_open, seq_read, NULL, single_release);
@@ -1696,7 +1696,7 @@ static int cal_status_read_func(struct seq_file *s, void *v)
 
 static int proc_cal_status_fops_open(struct inode *inode, struct file *file)
 {
-	return single_open(file, cal_status_read_func, PDE_DATA(inode));
+	return single_open(file, cal_status_read_func, pde_data(inode));
 }
 
 DECLARE_PROC_OPS(proc_cal_status_fops, proc_cal_status_fops_open, seq_read, NULL, single_release);
@@ -1920,7 +1920,7 @@ static ssize_t oplus_apk_read(struct file *file,
 	char *buf;
 	int len = 0;
 	int ret = 0;
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (!ts) {
 		TPD_INFO("ts not exist!\n");
@@ -2182,7 +2182,7 @@ static ssize_t oplus_apk_write(struct file *file,
 	char *buf;
 	APK_SWITCH_TYPE type;
 	int ret = count;
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (!ts) {
 		TPD_INFO("ts not exist!\n");
@@ -2357,7 +2357,7 @@ static int tp_baseline_debug_read_func(struct seq_file *s, void *v)
 
 static int data_baseline_open(struct inode *inode, struct file *file)
 {
-	return single_open(file, tp_baseline_debug_read_func, PDE_DATA(inode));
+	return single_open(file, tp_baseline_debug_read_func, pde_data(inode));
 }
 
 DECLARE_PROC_OPS(tp_baseline_data_proc_fops, data_baseline_open, seq_read, NULL, single_release);
@@ -2416,7 +2416,7 @@ static int tp_delta_debug_read_func(struct seq_file *s, void *v)
 
 static int data_delta_open(struct inode *inode, struct file *file)
 {
-	return single_open(file, tp_delta_debug_read_func, PDE_DATA(inode));
+	return single_open(file, tp_delta_debug_read_func, pde_data(inode));
 }
 
 DECLARE_PROC_OPS(tp_delta_data_proc_fops, data_delta_open, seq_read, NULL, single_release);
@@ -2470,7 +2470,7 @@ static int tp_self_delta_debug_read_func(struct seq_file *s, void *v)
 
 static int data_self_delta_open(struct inode *inode, struct file *file)
 {
-	return single_open(file, tp_self_delta_debug_read_func, PDE_DATA(inode));
+	return single_open(file, tp_self_delta_debug_read_func, pde_data(inode));
 }
 
 DECLARE_PROC_OPS(tp_self_delta_data_proc_fops, data_self_delta_open, seq_read, NULL, single_release);
@@ -2523,7 +2523,7 @@ static int tp_self_raw_debug_read_func(struct seq_file *s, void *v)
 
 static int data_self_raw_open(struct inode *inode, struct file *file)
 {
-	return single_open(file, tp_self_raw_debug_read_func, PDE_DATA(inode));
+	return single_open(file, tp_self_raw_debug_read_func, pde_data(inode));
 }
 
 DECLARE_PROC_OPS(tp_self_raw_data_proc_fops, data_self_raw_open, seq_read, NULL, single_release);
@@ -2589,7 +2589,7 @@ static int tp_main_register_read_func(struct seq_file *s, void *v)
 
 static int main_register_open(struct inode *inode, struct file *file)
 {
-	return single_open(file, tp_main_register_read_func, PDE_DATA(inode));
+	return single_open(file, tp_main_register_read_func, pde_data(inode));
 }
 
 DECLARE_PROC_OPS(tp_main_register_proc_fops, main_register_open, seq_read, NULL, single_release);
@@ -2642,7 +2642,7 @@ static int tp_reserve_read_func(struct seq_file *s, void *v)
 
 static int reserve_open(struct inode *inode, struct file *file)
 {
-	return single_open(file, tp_reserve_read_func, PDE_DATA(inode));
+	return single_open(file, tp_reserve_read_func, pde_data(inode));
 }
 
 DECLARE_PROC_OPS(tp_reserve_proc_fops, reserve_open, seq_read, NULL, single_release);
@@ -2663,7 +2663,7 @@ static int tp_limit_data_read_func(struct seq_file *s, void *v)
 
 static int limit_data_open(struct inode *inode, struct file *file)
 {
-	return single_open(file, tp_limit_data_read_func, PDE_DATA(inode));
+	return single_open(file, tp_limit_data_read_func, pde_data(inode));
 }
 
 DECLARE_PROC_OPS(tp_limit_data_proc_fops, limit_data_open, seq_read, NULL, single_release);
@@ -2716,7 +2716,7 @@ static int tp_abs_doze_read_func(struct seq_file *s, void *v)
 
 static int abs_doze_open(struct inode *inode, struct file *file)
 {
-	return single_open(file, tp_abs_doze_read_func, PDE_DATA(inode));
+	return single_open(file, tp_abs_doze_read_func, pde_data(inode));
 }
 
 DECLARE_PROC_OPS(tp_abs_doze_proc_fops, abs_doze_open, seq_read, NULL, single_release);
@@ -2725,7 +2725,7 @@ DECLARE_PROC_OPS(tp_abs_doze_proc_fops, abs_doze_open, seq_read, NULL, single_re
 /*proc/touchpanel/debug_info/snr*/
 static ssize_t proc_snr_write(struct file *file, const char __user *buf, size_t count, loff_t *lo)
 {
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 	int tmp = 0, i = 0;
 	char buffer[4] = {0};
 
@@ -2812,7 +2812,7 @@ static int tp_baseline_snr_read_func(struct seq_file *s, void *v)
 
 static int proc_snr_open(struct inode *inode, struct file *file)
 {
-	return single_open(file, tp_baseline_snr_read_func, PDE_DATA(inode));
+	return single_open(file, tp_baseline_snr_read_func, pde_data(inode));
 }
 
 DECLARE_PROC_OPS(proc_snr_ops, proc_snr_open, seq_read, proc_snr_write, NULL);
@@ -2866,7 +2866,7 @@ static ssize_t proc_freq_hop_write(struct file *file, const char __user *buffer,
 {
 	int value = 0;
 	char buf[4] = {0};
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (!ts) {
 		return count;
@@ -2901,7 +2901,7 @@ static ssize_t proc_freq_hop_read(struct file *file, char __user *buffer,
 {
 	int ret = 0;
 	char page[PAGESIZE] = {0};
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 
 	if (!ts) {
 		snprintf(page, PAGESIZE - 1, "%d\n", -1); /*no support*/
@@ -2940,7 +2940,7 @@ static int tp_health_monitor_read_func(struct seq_file *s, void *v)
 
 static ssize_t health_monitor_control(struct file *file, const char __user *buf, size_t count, loff_t *lo)
 {
-	struct touchpanel_data *ts = PDE_DATA(file_inode(file));
+	struct touchpanel_data *ts = pde_data(file_inode(file));
 	struct monitor_data *monitor_data = &ts->monitor_data;
 	char buffer[4] = {0};
 	int tmp = 0;
@@ -2966,7 +2966,7 @@ static ssize_t health_monitor_control(struct file *file, const char __user *buf,
 
 static int health_monitor_open(struct inode *inode, struct file *file)
 {
-	return single_open(file, tp_health_monitor_read_func, PDE_DATA(inode));
+	return single_open(file, tp_health_monitor_read_func, pde_data(inode));
 }
 
 DECLARE_PROC_OPS(tp_health_monitor_proc_fops, health_monitor_open, seq_read, health_monitor_control, single_release);
