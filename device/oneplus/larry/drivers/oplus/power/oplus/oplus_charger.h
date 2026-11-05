@@ -152,7 +152,7 @@
 #elif defined CONFIG_OPLUS_SM6115R_CHARGER
 #include "charger_ic/oplus_battery_sm6375.h"
 #else /* CONFIG_OPLUS_MSM8953_CHARGER */
-#include "charger_ic/oplus_battery_msm8976.h"
+// #include "charger_ic/oplus_battery_msm8976.h"
 #endif /* CONFIG_OPLUS_MSM8953_CHARGER */
 #endif /* CONFIG_OPLUS_CHARGER_MTK */
 

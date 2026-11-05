@@ -1,0 +1,21 @@
+StratoKernel 5.4.300-qgki-72187-g09d1f53b8068
+Branch: Exosphere-23.0
+Date: 20251124-0832
+Device: OnePlus Nord N30 (larry)
+
+Features: 
+- KernelSU Next
+- O3 Optimization
+- LTO (Link Time Optimization)
+- SUSFS
+- Custom Device Trees (DTB/DTBO)
+
+Build Info:
+- Kernel: 42.69 MB
+
+
+
+Installation:
+- Flash via TWRP/OrangeFox recovery
+- Automatically handles A/B slots
+- DTB/DTBO flashed to dedicated partitions
