@@ -8,6 +8,7 @@
 
 #include "oplus_charger.h"
 #include "oplus_vooc.h"
+extern unsigned int get_project(void);
 #include "oplus_gauge.h"
 #include "oplus_adapter.h"
 #include "oplus_debug_info.h"
@@ -1690,7 +1691,7 @@ static void oplus_vooc_fastchg_func(struct work_struct *work)
 
 		oplus_vooc_wake_bcc_work_when_fastchg();
 
-		vooc_xlog_printk(CHG_LOG_CRTI, "temp_range[%d-%d-%d-%d-%d-%d]", chip->vooc_low_temp,
+		vooc_xlog_printk(CHG_LOG_CRTI, "temp_range[%d-%d-%d-%d-%d-%d-%d]", chip->vooc_low_temp,
 				 chip->vooc_little_cold_temp, chip->vooc_cool_temp, chip->vooc_little_cool_temp,
 				 chip->vooc_normal_low_temp, chip->vooc_normal_high_temp, chip->vooc_high_temp);
 		vooc_xlog_printk(CHG_LOG_CRTI,
@@ -2216,7 +2217,7 @@ static struct battery_log_ops battlog_voocphy_ops = {
 
 static ssize_t proc_fastchg_fw_update_write(struct file *file, const char __user *buff, size_t len, loff_t *data)
 {
-	struct oplus_vooc_chip *chip = PDE_DATA(file_inode(file));
+	struct oplus_vooc_chip *chip = pde_data(file_inode(file));
 	char write_data[32] = { 0 };
 
 	if (len > sizeof(write_data)) {
@@ -2242,7 +2243,7 @@ static ssize_t proc_fastchg_fw_update_write(struct file *file, const char __user
 
 static ssize_t proc_fastchg_fw_update_read(struct file *file, char __user *buff, size_t count, loff_t *off)
 {
-	struct oplus_vooc_chip *chip = PDE_DATA(file_inode(file));
+	struct oplus_vooc_chip *chip = pde_data(file_inode(file));
 	char page[256] = { 0 };
 	char read_data[32] = { 0 };
 	int len = 0;
